@@ -72,7 +72,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl p-8 lg:p-12">
                 <img
-                  src="https://ugc.same-assets.com/V5bHzTqBq9tIilH1ZMBTPOQU_4NbCgYJ.jpeg"
+                  src="/headshot.jpg"
                   alt="Anderson Carl - Professional Document Specialist"
                   className="w-full h-auto rounded-2xl shadow-lg"
                 />

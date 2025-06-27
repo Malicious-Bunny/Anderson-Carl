@@ -63,7 +63,7 @@ export default function Home() {
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl p-8 lg:p-12">
                 <img
-                  src="/driverlicense-1.jpg"
+                  src="/headshot.jpg"
                   alt="Professional UK Document Consultation"
                   className="w-full h-auto rounded-2xl shadow-lg"
                 />

@@ -25,7 +25,7 @@ const Footer = () => {
                 📧 Email: <a href="mailto:anderson.carl@email.com" className="text-white hover:text-blue-300">anderson.carl@email.com</a>
               </p>
               <p className="text-blue-200">
-                📱 WhatsApp: <a href="https://wa.me/447000000000" className="text-white hover:text-blue-300">+44 7000 000 000</a>
+                📱 WhatsApp: <a href="https://wa.me/447469515438" className="text-white hover:text-blue-300">+44 7000 000 000</a>
               </p>
               <p className="text-blue-200">
                 📍 Office: Central London, UK
