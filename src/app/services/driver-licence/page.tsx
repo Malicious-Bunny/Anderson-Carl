@@ -166,7 +166,7 @@ export default function DriverLicenceService() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ImageServiceCard
-              image="/driverlicense-1.jpg"
+              image="/provisional-license.jpg"
               imageAlt="UK Provisional Licence Service"
               title="UK PROVISIONAL LICENCE SERVICE"
               description="Complete assistance with UK provisional driving licence applications and processing"
@@ -194,7 +194,7 @@ export default function DriverLicenceService() {
               price="From £65"
             />
             <ImageServiceCard
-              image="/driverlicense-5.jpg"
+              image="/convert-international-license.jpg"
               imageAlt="International Licence Conversion Service"
               title="CONVERT YOUR INTERNATIONAL LICENCE TO UK FULL LICENCE"
               description="Expert conversion service from international licence to UK full licence"
