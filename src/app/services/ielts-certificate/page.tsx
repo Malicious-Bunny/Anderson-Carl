@@ -34,7 +34,8 @@ export default function IELTSCertificateService() {
               We guide you through preparation and application procedures.
             </p>
             <div className="bg-white/10 rounded-lg p-6 inline-block">
-              <p className="text-2xl font-bold text-white mb-2">Service Fee: £45</p>
+              <p className="text-2xl font-bold text-white mb-2">Service Fee: £600</p>
+              <p className="text-green-200 mb-2">Processing Time: 3 days</p>
               <p className="text-blue-200">Comprehensive IELTS certification assistance</p>
             </div>
           </div>
@@ -121,7 +122,8 @@ export default function IELTSCertificateService() {
               </ul>
 
               <div className="bg-blue-900 text-white rounded-lg p-6 mb-6">
-                <h4 className="text-lg font-semibold mb-3">Service Fee: £45</h4>
+                <h4 className="text-lg font-semibold mb-3">Service Fee: £600</h4>
+                <p className="text-green-200 mb-2"><strong>Processing Time: 3 days</strong></p>
                 <p className="text-blue-200 mb-4">
                   Includes test registration assistance, preparation guidance,
                   and certificate support services.

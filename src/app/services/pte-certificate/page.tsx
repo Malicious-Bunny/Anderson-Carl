@@ -26,7 +26,8 @@ export default function PTECertificateService() {
               We guide you through the entire process from registration to results.
             </p>
             <div className="bg-blue-900 text-white rounded-lg p-6 inline-block">
-              <p className="text-2xl font-bold text-white mb-2">Service Fee: £45</p>
+              <p className="text-2xl font-bold text-white mb-2">Service Fee: £620</p>
+              <p className="text-purple-200 mb-2">Processing Time: 3 days</p>
               <p className="text-blue-200">Comprehensive PTE certification assistance</p>
             </div>
           </div>
@@ -122,7 +123,8 @@ export default function PTECertificateService() {
               </ul>
 
               <div className="bg-blue-900 text-white rounded-lg p-6 mb-6">
-                <h4 className="text-lg font-semibold mb-3">Service Fee: £45</h4>
+                <h4 className="text-lg font-semibold mb-3">Service Fee: £620</h4>
+                <p className="text-purple-200 mb-2"><strong>Processing Time: 3 days</strong></p>
                 <p className="text-blue-200 mb-4">
                   Includes test registration assistance, preparation guidance,
                   and score verification support.

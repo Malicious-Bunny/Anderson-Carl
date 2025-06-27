@@ -34,7 +34,8 @@ export default function UKMarriageCertificateService() {
               We help with applications, replacements, and document verification.
             </p>
             <div className="bg-white/10 rounded-lg p-6 inline-block">
-              <p className="text-2xl font-bold text-white mb-2">Service Fee: £55</p>
+              <p className="text-2xl font-bold text-white mb-2">Service Fee: £700</p>
+              <p className="text-blue-200 mb-2">Processing Time: 2 days</p>
               <p className="text-blue-200">Comprehensive marriage certificate assistance</p>
             </div>
           </div>
@@ -121,7 +122,8 @@ export default function UKMarriageCertificateService() {
               </ul>
 
               <div className="bg-blue-900 text-white rounded-lg p-6 mb-6">
-                <h4 className="text-lg font-semibold mb-3">Service Fee: £55</h4>
+                <h4 className="text-lg font-semibold mb-3">Service Fee: £700</h4>
+                <p className="text-blue-200 mb-2"><strong>Processing Time: 2 days</strong></p>
                 <p className="text-blue-200 mb-4">
                   Includes complete application assistance, record search,
                   and follow-up support until completion.

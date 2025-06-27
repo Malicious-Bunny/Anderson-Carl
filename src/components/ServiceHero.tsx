@@ -57,7 +57,7 @@ function ServiceHero({
             {/* Service Features */}
             <div className="space-y-4">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-4">
+                <div key={`feature-${index}-${feature.icon}`} className="flex items-center space-x-4">
                   <div className={`${feature.bgColor} p-3 rounded-full`}>
                     <span className={`${feature.iconColor} text-xl`}>{feature.icon}</span>
                   </div>

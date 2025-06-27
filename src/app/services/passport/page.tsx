@@ -25,7 +25,8 @@ export default function PassportService() {
               Fast, comprehensive assistance - streamline your UK passport application with expert guidance from start to finish. We handle the paperwork so you don't have to.
             </p>
             <div className="bg-blue-900 text-white rounded-lg p-6 inline-block">
-              <p className="text-2xl font-bold text-white mb-2">Service Fee: £75</p>
+              <p className="text-2xl font-bold text-white mb-2">Service Fee: From £500</p>
+              <p className="text-blue-200 mb-2">Processing Time: 4 days</p>
               <p className="text-blue-200">Complete passport application assistance</p>
             </div>
           </div>
@@ -33,7 +34,7 @@ export default function PassportService() {
       </section>
 
       {/* Auto Image Slider */}
-      <ScrollGallery 
+      <ScrollGallery
       images={
         [
           '/passport-1.jpg',
@@ -41,7 +42,7 @@ export default function PassportService() {
           '/passport-3.jpg'
         ]
       }
-      
+
       />
 
       {/* Service Details */}
@@ -124,7 +125,13 @@ export default function PassportService() {
               </ul>
 
               <div className="bg-blue-900 text-white rounded-lg p-6 mb-6">
-                <h4 className="text-lg font-semibold mb-3">Service Fee: £75</h4>
+                <h4 className="text-lg font-semibold mb-3">Service Fees:</h4>
+                <div className="mb-3">
+                  <p className="text-blue-200">• New Application: £1,500</p>
+                  <p className="text-blue-200">• Renewal Service: £500</p>
+                  <p className="text-blue-200">• Lost/Stolen Replacement: £1,500</p>
+                  <p className="text-blue-200 mt-2"><strong>Processing Time: 4 days</strong></p>
+                </div>
                 <p className="text-blue-200 mb-4">
                   Includes complete application assistance, document review,
                   and follow-up support until completion.

@@ -81,9 +81,9 @@ function ImageSlideshow({
       {/* Dot Indicators - Only show if multiple images */}
       {images.length > 1 && (
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-          {images.map((_, index) => (
+          {images.map((image, index) => (
             <button
-              key={index}
+              key={`slide-${index}-${image}`}
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentIndex

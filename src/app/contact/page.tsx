@@ -182,14 +182,15 @@ export default function ContactPage() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
-                    <option value="passport">UK Passport Application (£75)</option>
+                    <option value="passport">UK Passport Application (From £500)</option>
                     <option value="driver-licence">Driver Licence Services (£65)</option>
                     <option value="resident-permit">Resident Permit (£85)</option>
                     <option value="visa-renewal">Visa Renewal (£95)</option>
-                    <option value="uk-birth-certificate">UK Birth Certificate (£55)</option>
-                    <option value="uk-marriage-certificate">UK Marriage Certificate (£55)</option>
-                    <option value="ielts-certificate">IELTS Certificate (£45)</option>
-                    <option value="pte-certificate">PTE Certificate (£45)</option>
+                    <option value="uk-birth-certificate">UK Birth Certificate (£550)</option>
+                    <option value="uk-marriage-certificate">UK Marriage Certificate (£700)</option>
+                    <option value="uk-death-certificate">UK Death Certificate (£1,000)</option>
+                    <option value="ielts-certificate">IELTS Certificate (£600)</option>
+                    <option value="pte-certificate">PTE Certificate (£620)</option>
                     <option value="consultation">General Consultation</option>
                   </select>
                 </div>
