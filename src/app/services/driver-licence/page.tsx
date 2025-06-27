@@ -180,7 +180,7 @@ export default function DriverLicenceService() {
               price="From £65"
             />
             <ImageServiceCard
-              image="/driverlicense-3.jpg"
+              image="/convert-international-license.jpg"
               imageAlt="UK Practical Test Service"
               title="UK PRACTICAL TEST SERVICE"
               description="Submit your documents and we complete the tests"
@@ -194,7 +194,7 @@ export default function DriverLicenceService() {
               price="From £65"
             />
             <ImageServiceCard
-              image="/convert-international-license.jpg"
+              image="/provi-license.jpg"
               imageAlt="International Licence Conversion Service"
               title="CONVERT INTERNATIONAL LICENCE TO UK FULL LICENCE"
               description="Convert your international licence to UK full licence no test"

@@ -22,7 +22,7 @@ export const mainServices: MainService[] = [
     description: 'Professional help with driver licence applications, renewals, and replacements for all UK licence categories.',
     price: 'From £65',
     badge: 'Fast Track',
-    image: 'https://ugc.same-assets.com/8DxIBz0vlVvFE96HMx65ojUGsxiKgkLa.jpeg',
+    image: '/license-service.jpg',
     link: '/services/driver-licence',
     subServices: [
       {
@@ -180,7 +180,7 @@ export const services: Service[] = [
     description: 'Help with driver licence applications, renewals, and replacements',
     price: '£65',
     icon: '🚗',
-    image: 'https://ugc.same-assets.com/8DxIBz0vlVvFE96HMx65ojUGsxiKgkLa.jpeg',
+    image: 'https://ugc.same-.jpg',
     link: '/services/driver-licence'
   },
   {
