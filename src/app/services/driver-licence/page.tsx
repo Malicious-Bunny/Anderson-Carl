@@ -183,21 +183,21 @@ export default function DriverLicenceService() {
               image="/driverlicense-3.jpg"
               imageAlt="UK Practical Test Service"
               title="UK PRACTICAL TEST SERVICE"
-              description="Professional support for UK practical driving test completion"
+              description="Submit your documents and we complete the tests"
               price="From £65"
             />
             <ImageServiceCard
               image="/driverlicense-4.jpg"
               imageAlt="UK Full Licence Service"
               title="UK FULL LICENCE SERVICE"
-              description="Complete UK full driving licence application and processing service"
+              description="Complete UK full driving license no test"
               price="From £65"
             />
             <ImageServiceCard
               image="/convert-international-license.jpg"
               imageAlt="International Licence Conversion Service"
               title="CONVERT YOUR INTERNATIONAL LICENCE TO UK FULL LICENCE"
-              description="Expert conversion service from international licence to UK full licence"
+              description="Convert your international licence to UK full licence no test"
               price="From £65"
               className="md:col-span-2 lg:col-span-1"
             />
