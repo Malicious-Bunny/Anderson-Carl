@@ -60,6 +60,9 @@ const Header = () => {
                   <Link href="/services/pte-certificate" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
                     PTE Certificate
                   </Link>
+                  <Link href="/services/uk-death-certificate" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    UK Death Certificate
+                  </Link>
                 </div>
               </div>
             </div>
@@ -127,6 +130,9 @@ const Header = () => {
                 </Link>
                 <Link href="/services/pte-certificate" className="block text-gray-600 hover:text-blue-900">
                   PTE Certificate
+                </Link>
+                <Link href="/services/uk-death-certificate" className="block text-gray-600 hover:text-blue-900">
+                  UK Death Certificate
                 </Link>
               </div>
             </div>
