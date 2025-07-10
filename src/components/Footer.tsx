@@ -22,10 +22,10 @@ const Footer = () => {
             </p>
             <div className="space-y-2">
               <p className="text-blue-200">
-                📧 Email: <a href="mailto:anderson.carl@email.com" className="text-white hover:text-blue-300">anderson.carl@email.com</a>
+                📧 Email: <a href="mailto:andersoncarlconsultancy@gmail.com" className="text-white hover:text-blue-300">andersoncarlconsultancy@gmail.com</a>
               </p>
               <p className="text-blue-200">
-                📱 WhatsApp: <a href="https://wa.me/447469515438" className="text-white hover:text-blue-300">+44 7469 515438</a>
+                📱 WhatsApp: <a href="https://wa.me/447940233536" className="text-white hover:text-blue-300">+44 7940 233536</a>
               </p>
               <p className="text-blue-200">
                 📍 Office: Central London, UK

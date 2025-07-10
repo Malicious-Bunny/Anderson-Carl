@@ -1,7 +1,7 @@
 'use client';
 
 const WhatsAppButton = () => {
-  const whatsappNumber = "447469515438"; // Replace with actual WhatsApp number
+  const whatsappNumber = "447940233536"; // Replace with actual WhatsApp number
   const message = "Hello Anderson Carl, I need assistance with Life in the UK documents.";
 
   const handleClick = () => {

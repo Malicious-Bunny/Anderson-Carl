@@ -67,7 +67,7 @@ export default function ContactPage() {
               {/* Quick Actions */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="https://wa.me/447469515438?text=Hello Anderson Carl, I need assistance with Life in the UK documents."
+                  href="https://wa.me/447940233536?text=Hello Anderson Carl, I need assistance with Life in the UK documents."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center"
@@ -75,7 +75,7 @@ export default function ContactPage() {
                   Start WhatsApp Chat
                 </a>
                 <a
-                  href="mailto:anderson.carl@email.com"
+                  href="mailto:andersoncarlconsultancy@gmail.com"
                   className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-900 hover:text-blue-900 transition-colors text-center"
                 >
                   Send Email
@@ -295,7 +295,7 @@ export default function ContactPage() {
                   with Anderson Carl directly.
                 </p>
                 <a
-                  href="https://wa.me/447469515438?text=Hello Anderson Carl, I need assistance with Life in the UK documents."
+                  href="https://wa.me/447940233536?text=Hello Anderson Carl, I need assistance with Life in the UK documents."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary text-lg px-6 py-3 inline-block"
