@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: "Anderson Carl - Life in the UK Documents Specialist",
@@ -17,6 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Analytics />
       <body>
         <Header />
         <main>
