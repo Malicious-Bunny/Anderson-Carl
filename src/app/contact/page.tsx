@@ -243,7 +243,7 @@ export default function ContactPage() {
                       <h4 className="text-lg font-semibold text-blue-900 mb-2">Email</h4>
                       <p className="text-gray-700">
                         <a href="mailto:anderson.carl@email.com" className="hover:text-blue-900">
-                          anderson.carl@email.com
+                          andersoncarlconsultancy@gmail.com
                         </a>
                       </p>
                       <p className="text-sm text-gray-600">Response within 2 hours</p>
@@ -261,7 +261,7 @@ export default function ContactPage() {
                           rel="noopener noreferrer"
                           className="hover:text-blue-900"
                         >
-                          +44 7000 000 000
+                          +44 7940 233536
                         </a>
                       </p>
                       <p className="text-sm text-gray-600">Instant messaging support</p>
