@@ -142,7 +142,7 @@ export default function IELTSCertificateService() {
                   Start Your IELTS Journey
                 </Link>
                 <a
-                  href="https://wa.me/44746951543?text=Hello Anderson Carl, I need assistance with IELTS certification."
+                  href="https://wa.me/447469515438?text=Hello Anderson Carl, I need assistance with IELTS certification."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary w-full text-center block text-lg py-3"

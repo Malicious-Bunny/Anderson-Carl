@@ -147,7 +147,7 @@ export default function UKDeathCertificateService() {
                   Start Urgent Application
                 </Link>
                 <a
-                  href="https://wa.me/44746951543?text=Hello Anderson Carl, I need urgent assistance with obtaining a UK death certificate."
+                  href="https://wa.me/447469515438?text=Hello Anderson Carl, I need urgent assistance with obtaining a UK death certificate."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary w-full text-center block text-lg py-3"

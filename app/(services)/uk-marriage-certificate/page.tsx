@@ -141,7 +141,7 @@ export default function UKMarriageCertificateService() {
                   Start Your Application
                 </Link>
                 <a
-                  href="https://wa.me/44746951543?text=Hello Anderson Carl, I need assistance with obtaining a UK marriage certificate."
+                  href="https://wa.me/447469515438?text=Hello Anderson Carl, I need assistance with obtaining a UK marriage certificate."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary w-full text-center block text-lg py-3"

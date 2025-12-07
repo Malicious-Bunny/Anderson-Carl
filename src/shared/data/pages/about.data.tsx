@@ -242,7 +242,7 @@ export const contactAbout: ContactProps = {
       title: 'WhatsApp',
       description: '+44 7940 233536',
       icon: IconBrandWhatsapp,
-      href: 'https://wa.me/447940233536',
+      href: 'https://wa.me/4479402335368',
     },
     {
       title: 'Office Location',
