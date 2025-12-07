@@ -159,7 +159,7 @@ export default function PTEIELTSNoExamService() {
               Get Free Consultation
             </Link>
             <a
-              href="https://wa.me/447940233536"
+              href="https://wa.me/44746951543"
               className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200"
             >
               WhatsApp Us Now

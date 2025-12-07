@@ -163,7 +163,7 @@ export const teamAbout: TeamProps = {
       social: [
         {
           icon: IconBrandWhatsapp,
-          href: 'https://wa.me/447940233536',
+          href: 'https://wa.me/44746951543',
         },
         {
           icon: IconMail,

@@ -142,7 +142,7 @@ export default function PTECertificateService() {
                   Start Your PTE Journey
                 </Link>
                 <a
-                  href="https://wa.me/447000000000?text=Hello Anderson Carl, I need assistance with PTE certification."
+                  href="https://wa.me/44746951543?text=Hello Anderson Carl, I need assistance with PTE certification."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary w-full text-center block text-lg py-3"
