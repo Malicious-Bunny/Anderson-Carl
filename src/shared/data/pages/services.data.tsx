@@ -38,7 +38,7 @@ export const heroServices: HeroProps = {
     href: '#services',
   },
   image: {
-    src: 'https://ext.same-assets.com/542609343/2010756552.jpeg',
+    src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80',
     alt: 'Anderson Carl UK Document Services',
   },
 };
@@ -124,7 +124,7 @@ export const contentServicesOne: ContentProps = {
     },
   ],
   image: {
-    src: 'https://ext.same-assets.com/542609343/2010756552.jpeg',
+    src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80',
     alt: 'Professional UK Document Consultation',
   },
   isReversed: false,

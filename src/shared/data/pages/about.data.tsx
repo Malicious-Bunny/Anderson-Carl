@@ -56,7 +56,7 @@ export const hero2About: HeroProps = {
     href: 'mailto:support@andersoncarlconsultancy.uk',
   },
   image: {
-    src: 'https://ext.same-assets.com/542609343/2010756552.jpeg',
+    src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80',
     alt: 'Anderson Carl - UK Documents Specialist',
   },
 };
@@ -137,7 +137,7 @@ export const teamAbout: TeamProps = {
       name: 'Anderson Carl',
       occupation: 'UK Documents Specialist & Founder',
       image: {
-        src: 'https://ext.same-assets.com/542609343/2010756552.jpeg',
+        src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80',
         alt: 'Anderson Carl',
       },
       items: [
@@ -210,7 +210,7 @@ export const stepsAbout: StepsProps = {
     },
   ],
   image: {
-    src: 'https://ext.same-assets.com/542609343/2010756552.jpeg',
+    src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80',
     alt: 'Anderson Carl Work Process',
   },
   callToAction: {
@@ -240,9 +240,9 @@ export const contactAbout: ContactProps = {
     },
     {
       title: 'WhatsApp',
-      description: '+44 7940 233536',
+      description: '+44 7578 141755',
       icon: IconBrandWhatsapp,
-      href: 'https://wa.me/4479402335368',
+      href: 'https://wa.me/447578141755',
     },
     {
       title: 'Office Location',

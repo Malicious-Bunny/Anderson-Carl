@@ -69,7 +69,7 @@ export const heroHome: HeroProps = {
     href: '#services',
   },
   image: {
-    src: 'https://ext.same-assets.com/542609343/453545378.jpeg',
+    src: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80',
     alt: 'Anderson Carl - UK Documents Specialist',
   },
 };
@@ -80,19 +80,19 @@ export const socialProofHome: SocialProofProps = {
   hasBackground: false,
   images: [
     {
-      src: 'https://ext.same-assets.com/542609343/1481361524.jpeg',
+      src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&q=80',
       alt: 'UK Driver Licence Services',
     },
     {
-      src: 'https://ext.same-assets.com/542609343/442901201.jpeg',
+      src: 'https://images.unsplash.com/photo-1488085061387-422e29b40080?w=400&q=80',
       alt: 'UK Passport Services',
     },
     {
-      src: 'https://ext.same-assets.com/542609343/3252500394.jpeg',
+      src: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=400&q=80',
       alt: 'UK Civil Documents',
     },
     {
-      src: 'https://ext.same-assets.com/542609343/461631757.jpeg',
+      src: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&q=80',
       alt: 'UK Death Certificate',
     },
   ],
@@ -141,7 +141,7 @@ export const contentHomeOne: ContentProps = {
     },
   ],
   image: {
-    src: 'https://ext.same-assets.com/542609343/2010756552.jpeg',
+    src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80',
     alt: 'Professional UK Document Consultation',
   },
   isReversed: false,
@@ -374,7 +374,7 @@ export const stepsHome: StepsProps = {
     },
   ],
   image: {
-    src: 'https://ext.same-assets.com/542609343/2010756552.jpeg',
+    src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80',
     alt: 'Anderson Carl Work Process',
   },
 };
@@ -393,7 +393,7 @@ export const testimonialsHome: TestimonialsProps = {
       name: 'Mohamed Bashir',
       job: 'UK Resident',
       image: {
-        src: '',
+        src: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=256&q=80',
         alt: 'Mohamed Bashir',
       },
     },
@@ -402,7 +402,7 @@ export const testimonialsHome: TestimonialsProps = {
       name: 'Ahmed Fahti',
       job: 'Immigration Client',
       image: {
-        src: '',
+        src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=256&q=80',
         alt: 'ahmed fahti',
       },
     },
@@ -411,7 +411,7 @@ export const testimonialsHome: TestimonialsProps = {
       name: 'Rashir Pooja',
       job: 'Professional Client',
       image: {
-        src: '',
+        src: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=256&q=80',
         alt: 'rashir pooja',
       },
     },

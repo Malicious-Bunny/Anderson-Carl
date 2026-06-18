@@ -13,7 +13,7 @@ export const heroContact: HeroProps = {
   ),
   tagline: 'Contact Anderson Carl',
   image: {
-    src: 'https://ext.same-assets.com/542609343/2010756552.jpeg',
+    src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80',
     alt: 'Contact Anderson Carl - UK Documents Specialist',
   },
 };
@@ -40,9 +40,9 @@ export const contact2Contact: ContactProps = {
     },
     {
       title: 'WhatsApp',
-      description: '+44 7940 233536',
+      description: '+44 7578 141755',
       icon: IconBrandWhatsapp,
-      href: 'https://wa.me/44746951543',
+      href: 'https://wa.me/447578141755',
     },
     {
       title: 'Office Location',

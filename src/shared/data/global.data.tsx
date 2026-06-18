@@ -19,8 +19,8 @@ export const announcementData: AnnouncementProps = {
     href: 'mailto:support@andersoncarlconsultancy.uk',
   },
   callToAction2: {
-    text: 'WhatsApp: +44 7940 233536',
-    href: 'https://wa.me/447940233536',
+    text: 'WhatsApp: +44 7578 141755',
+    href: 'https://wa.me/447578141755',
   },
 };
 
@@ -216,9 +216,9 @@ export const contactData = {
     },
     {
       title: 'WhatsApp',
-      description: '+44 7940 233536',
+      description: '+44 7578 141755',
       icon: IconBrandWhatsapp,
-      href: 'https://wa.me/44746951543',
+      href: 'https://wa.me/447578141755',
     },
     {
       title: 'Office Location',
