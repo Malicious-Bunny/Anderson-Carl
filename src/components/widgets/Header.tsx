@@ -1,276 +1,191 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import { IconRss } from '@tabler/icons-react';
-import { useOnClickOutside } from '~/hooks/useOnClickOutside';
 import Link from 'next/link';
 import Logo from '~/components/atoms/Logo';
 import ToggleMenu from '../atoms/ToggleMenu';
 import { headerData } from '~/shared/data/global.data';
-import CTA from '../common/CTA';
-import { CallToActionType } from '~/shared/types';
+import { WA_URL } from '~/lib/constants';
+
+const WhatsAppIcon = () => (
+  <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+);
+
+const ChevronDown = () => (
+  <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+  </svg>
+);
 
 const Header = () => {
-  const { links, actions, isSticky, showToggleTheme, showRssFeed, position } = headerData;
+  const { links, isSticky } = headerData;
+  const desktopRef = useRef<HTMLUListElement>(null);
+  const mobileRef = useRef<HTMLDivElement>(null);
+  const initialState = links?.map(() => false) || [];
 
-  const desktopRef = useRef(null);
-  const mobileRef = useRef(null);
+  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean[]>(initialState);
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState<boolean[]>(initialState);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const initialDropdownState =
-    links?.map(() => false) || [];
-
-  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean[]>(initialDropdownState);
-  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState<boolean[]>(initialDropdownState);
-  const [isToggleMenuOpen, setIsToggleMenuOpen] = useState<boolean>(false);
-
-  const handleDesktopDropdownOnClick = (index: number) => {
-    setIsDropdownOpen((prevValues) => {
-      const newValues = [...(prevValues as boolean[])];
-      newValues.forEach((value, i) => {
-        if (value === true) {
-          newValues[i] = false;
-        } else {
-          newValues[i] = i === index;
-        }
-      });
-      return newValues;
-    });
+  const toggleDesktopDropdown = (index: number) => {
+    setIsDropdownOpen((prev) => prev.map((v, i) => (i === index ? !v : false)));
   };
 
-  const handleMobileDropdownOnClick = (index: number) => {
-    setIsMobileDropdownOpen((prevValues) => {
-      const newValues = [...(prevValues as boolean[])];
-      newValues[index] = !newValues[index]; // Toggle only the clicked dropdown
-      return newValues;
-    });
+  const closeDesktopDropdown = (index: number) => {
+    setIsDropdownOpen((prev) => prev.map((v, i) => (i === index ? false : v)));
   };
 
-  const handleCloseDropdownOnClick = (index: number) => {
-    setIsDropdownOpen((prevValues) => {
-      const newValues = [...(prevValues as boolean[])];
-      newValues[index] = false;
-      return newValues;
-    });
+  const toggleMobileDropdown = (index: number) => {
+    setIsMobileDropdownOpen((prev) => prev.map((v, i) => (i === index ? !v : v)));
   };
 
-  const handleToggleMenuOnClick = () => {
-    setIsToggleMenuOpen(!isToggleMenuOpen);
-    // Reset mobile dropdown states when closing menu
-    if (isToggleMenuOpen) {
-      setIsMobileDropdownOpen(initialDropdownState);
-    }
+  const closeMobileMenu = () => {
+    setIsMenuOpen(false);
+    setIsMobileDropdownOpen(initialState);
   };
-
-  // New function to handle mobile link clicks
-  const handleMobileLinkClick = () => {
-    // Close the mobile menu and reset all dropdown states
-    setIsToggleMenuOpen(false);
-    setIsMobileDropdownOpen(initialDropdownState);
-  };
-
-  // Handle click outside for desktop dropdowns
-  useOnClickOutside(desktopRef, () => {
-    setIsDropdownOpen(initialDropdownState);
-  });
-
-  // Handle click outside for mobile menu
-  useOnClickOutside(mobileRef, () => {
-    if (isToggleMenuOpen) {
-      setIsToggleMenuOpen(false);
-      setIsMobileDropdownOpen(initialDropdownState);
-    }
-  });
 
   return (
     <header
-      className={`top-0 z-40 mx-auto w-full flex-none bg-white/95 backdrop-blur-sm border-b border-neutral-warm-100 transition-all duration-200 ease-in-out ${
+      className={`top-0 z-40 w-full bg-white border-b border-neutral-warm-100 shadow-header ${
         isSticky ? 'sticky' : 'relative'
       }`}
       id="header"
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between py-4 md:py-6">
-          {/* Logo Section */}
-          <div className="flex items-center">
-            <Link
-              className="flex items-center hover:opacity-80 transition-opacity duration-200"
-              href="/"
-              onClick={() =>
-                isToggleMenuOpen ? handleToggleMenuOnClick() : setIsDropdownOpen(initialDropdownState)
-              }
-            >
-              <Logo />
-            </Link>
-          </div>
+        <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Logo */}
+          <Link href="/" onClick={() => setIsDropdownOpen(initialState)} className="flex-shrink-0">
+            <Logo />
+          </Link>
 
           {/* Desktop Navigation */}
-          <nav
-            className="hidden md:block"
-            aria-label="Main navigation"
-          >
-            <ul
-              ref={desktopRef}
-              className="flex items-center space-x-8"
-            >
-              {links &&
-                links.map(({ label, href, icon: Icon, links }, index) => (
-                  <li key={`item-link-${index}`} className="relative group">
-                    {links && links.length ? (
-                      <>
-                        <button
-                          className="nav-link flex items-center py-2 text-base font-medium transition-colors duration-200 hover:text-primary-800"
-                          onClick={() => handleDesktopDropdownOnClick(index)}
-                        >
-                          {label}
-                          {Icon && (
-                            <Icon
-                              className={`${
-                                isDropdownOpen[index] ? 'rotate-180' : ''
-                              } ml-1 h-4 w-4 transition-transform duration-200`}
-                            />
-                          )}
-                        </button>
-                        <ul
-                          className={`${
-                            isDropdownOpen[index] ? 'block' : 'hidden'
-                          } absolute top-full left-0 min-w-[240px] bg-white border border-neutral-warm-200 rounded-xl shadow-large backdrop-blur-sm bg-white/95 py-3 z-50`}
-                          style={{ WebkitBackfaceVisibility: 'hidden' }}
-                        >
-                          {links.map(({ label: label2, href: href2 }, index2) => (
-                            <li key={`item-link-${index2}`}>
+          <nav className="hidden lg:flex items-center" aria-label="Main navigation">
+            <ul ref={desktopRef} className="flex items-center space-x-1">
+              {links?.map(({ label, href, icon: Icon, links: subLinks }, index) => (
+                <li key={index} className="relative">
+                  {subLinks?.length ? (
+                    <>
+                      <button
+                        className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-neutral-warm-700 hover:text-primary-900 hover:bg-neutral-warm-100 rounded-lg transition-all duration-150 cursor-pointer"
+                        onClick={() => toggleDesktopDropdown(index)}
+                      >
+                        {label}
+                        <span className={`transition-transform duration-200 ${isDropdownOpen[index] ? 'rotate-180' : ''}`}>
+                          <ChevronDown />
+                        </span>
+                      </button>
+                      {isDropdownOpen[index] && (
+                        <ul className="absolute top-full left-0 mt-1 min-w-[260px] bg-white border border-neutral-warm-200 rounded-2xl shadow-large py-2 z-50">
+                          {subLinks.map(({ label: l2, href: h2 }, i2) => (
+                            <li key={i2}>
                               <Link
-                                className="block py-2 px-6 text-neutral-warm-700 hover:text-primary-800 hover:bg-neutral-warm-50 text-sm font-medium transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
-                                href={href2 as string}
-                                onClick={() => handleCloseDropdownOnClick(index)}
+                                href={h2 as string}
+                                className="block px-5 py-2.5 text-sm text-neutral-warm-700 hover:text-primary-900 hover:bg-neutral-warm-50 transition-colors duration-150"
+                                onClick={() => closeDesktopDropdown(index)}
                               >
-                                {label2}
+                                {l2}
                               </Link>
                             </li>
                           ))}
                         </ul>
-                      </>
-                    ) : (
-                      <Link
-                        className="nav-link block py-2 text-base font-medium transition-colors duration-200"
-                        href={href as string}
-                        onClick={() => setIsDropdownOpen(initialDropdownState)}
-                      >
-                        {label}
-                      </Link>
-                    )}
-                  </li>
-                ))}
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      href={href as string}
+                      className="block px-4 py-2 text-sm font-medium text-neutral-warm-700 hover:text-primary-900 hover:bg-neutral-warm-100 rounded-lg transition-all duration-150"
+                      onClick={() => setIsDropdownOpen(initialState)}
+                    >
+                      {label}
+                    </Link>
+                  )}
+                </li>
+              ))}
             </ul>
           </nav>
 
-          {/* Right Side Actions */}
-          <div className="flex items-center space-x-4">
-            {/* Mobile Menu Toggle */}
-            <div className="md:hidden">
-              <ToggleMenu handleToggleMenuOnClick={handleToggleMenuOnClick} isToggleMenuOpen={isToggleMenuOpen} />
-            </div>
+          {/* Right side */}
+          <div className="flex items-center gap-3">
+            {/* WhatsApp CTA - desktop */}
+            <a
+              href={WA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-[#25D366] hover:bg-[#1da851] text-white text-sm font-semibold rounded-xl transition-all duration-200 shadow-md hover:shadow-lg cursor-pointer"
+            >
+              <WhatsAppIcon />
+              WhatsApp Us
+            </a>
 
-            {/* Desktop Actions */}
-            <div className="hidden md:flex items-center space-x-4">
-              {showRssFeed && (
-                <Link
-                  className="p-2 text-neutral-warm-600 hover:text-primary-800 transition-colors duration-200"
-                  aria-label="RSS Feed"
-                  href=""
-                >
-                  <IconRss className="h-5 w-5" />
-                </Link>
-              )}
-              {actions && actions.length > 0 && (
-                <div className="flex items-center space-x-3">
-                  {actions.map((callToAction, index) => (
-                    <CTA
-                      key={`item-action-${index}`}
-                      callToAction={callToAction as CallToActionType}
-                      linkClass="btn btn-primary px-6 py-3 text-sm font-semibold"
-                    />
-                  ))}
-                </div>
-              )}
+            {/* Mobile hamburger */}
+            <div className="lg:hidden">
+              <ToggleMenu handleToggleMenuOnClick={() => setIsMenuOpen(!isMenuOpen)} isToggleMenuOpen={isMenuOpen} />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Mobile Navigation - Separate from desktop nav */}
-      {isToggleMenuOpen && (
-        <div
-          ref={mobileRef}
-          className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-sm border-b border-neutral-warm-100 z-50"
-        >
-          <nav aria-label="Mobile navigation" className="container-custom">
-            <ul className="flex flex-col py-4">
-              {links &&
-                links.map(({ label, href, icon: Icon, links }, index) => (
-                  <li key={`mobile-item-link-${index}`} className="border-b border-neutral-warm-100 last:border-b-0">
-                    {links && links.length ? (
-                      <>
-                        <button
-                          className="nav-link flex items-center justify-between w-full py-4 text-base font-medium transition-colors duration-200 hover:text-primary-800"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            handleMobileDropdownOnClick(index);
-                          }}
-                        >
-                          {label}
-                          {Icon && (
-                            <Icon
-                              className={`${
-                                (isMobileDropdownOpen && isMobileDropdownOpen[index]) ? 'rotate-180' : ''
-                              } h-4 w-4 transition-transform duration-200`}
-                            />
-                          )}
-                        </button>
-                        {(isMobileDropdownOpen && isMobileDropdownOpen[index]) && (
-                          <ul className="pb-4 bg-neutral-warm-25">
-                            {links.map(({ label: label2, href: href2 }, index2) => (
-                              <li key={`mobile-item-link-${index2}`}>
-                                <Link
-                                  className="block py-3 px-6 text-neutral-warm-700 hover:text-primary-800 hover:bg-neutral-warm-50 text-sm font-medium transition-colors duration-200 border-l-2 border-primary-200"
-                                  href={href2 as string}
-                                  onClick={handleMobileLinkClick}
-                                >
-                                  {label2}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </>
-                    ) : (
-                      <Link
-                        className="nav-link block py-4 text-base font-medium transition-colors duration-200"
-                        href={href as string}
-                        onClick={handleMobileLinkClick}
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div ref={mobileRef} className="lg:hidden bg-white border-t border-neutral-warm-100 shadow-large">
+          <nav className="container-custom py-4" aria-label="Mobile navigation">
+            <ul className="flex flex-col divide-y divide-neutral-warm-100">
+              {links?.map(({ label, href, links: subLinks }, index) => (
+                <li key={index}>
+                  {subLinks?.length ? (
+                    <>
+                      <button
+                        className="flex items-center justify-between w-full py-3.5 text-base font-medium text-neutral-warm-800 hover:text-primary-900 cursor-pointer"
+                        onClick={() => toggleMobileDropdown(index)}
                       >
                         {label}
-                      </Link>
-                    )}
-                  </li>
-                ))}
+                        <span className={`transition-transform duration-200 ${isMobileDropdownOpen[index] ? 'rotate-180' : ''}`}>
+                          <ChevronDown />
+                        </span>
+                      </button>
+                      {isMobileDropdownOpen[index] && (
+                        <ul className="pb-3 pl-4 space-y-1">
+                          {subLinks.map(({ label: l2, href: h2 }, i2) => (
+                            <li key={i2}>
+                              <Link
+                                href={h2 as string}
+                                className="block py-2 text-sm text-neutral-warm-600 hover:text-primary-900 border-l-2 border-primary-200 pl-3 transition-colors duration-150"
+                                onClick={closeMobileMenu}
+                              >
+                                {l2}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      href={href as string}
+                      className="block py-3.5 text-base font-medium text-neutral-warm-800 hover:text-primary-900 transition-colors duration-150"
+                      onClick={closeMobileMenu}
+                    >
+                      {label}
+                    </Link>
+                  )}
+                </li>
+              ))}
             </ul>
 
-            {/* Mobile Actions */}
-            <div className="border-t border-neutral-warm-100 pt-4 pb-4">
-              <div className="flex items-center justify-center">
-                {actions && actions.length > 0 && (
-                  <div className="flex space-x-3">
-                    {actions.map((callToAction, index) => (
-                      <CTA
-                        key={`mobile-item-action-${index}`}
-                        callToAction={callToAction as CallToActionType}
-                        linkClass="btn btn-primary px-6 py-3 text-sm font-semibold"
-                      />
-                    ))}
-                  </div>
-                )}
-              </div>
+            {/* Mobile WhatsApp CTA */}
+            <div className="pt-4 pb-2">
+              <a
+                href={WA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full py-3.5 bg-[#25D366] hover:bg-[#1da851] text-white font-semibold rounded-xl transition-colors duration-200 cursor-pointer"
+                onClick={closeMobileMenu}
+              >
+                <WhatsAppIcon />
+                Chat on WhatsApp
+              </a>
             </div>
           </nav>
         </div>

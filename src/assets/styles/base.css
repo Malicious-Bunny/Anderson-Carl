@@ -3,174 +3,109 @@
 @import 'tailwindcss/utilities';
 @import './blog.css';
 
-/* Fonts are loaded via Fontshare link in layout.tsx */
-/* Spline Sans: Primary font for headings and UI elements */
-/* Quicksand: Secondary font for body text and content */
-
 @layer base {
   html {
-    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
   }
 
   body {
-    @apply font-sans text-base leading-relaxed text-neutral-warm-800;
-    @apply bg-neutral-warm-50; /* light gray canvas */
+    @apply font-sans text-base leading-relaxed text-neutral-warm-800 bg-neutral-warm-50;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-semibold tracking-tight text-neutral-warm-900;
+    @apply font-display font-bold tracking-tight text-neutral-warm-900;
   }
 
-  a { @apply text-primary-700 hover:text-primary-800 transition-colors duration-200; }
+  h1 { @apply text-4xl md:text-5xl lg:text-6xl leading-[1.1]; }
+  h2 { @apply text-3xl md:text-4xl lg:text-5xl leading-[1.15]; }
+  h3 { @apply text-2xl md:text-3xl leading-snug; }
+  h4 { @apply text-xl md:text-2xl leading-snug; }
+  h5 { @apply text-lg md:text-xl leading-snug; }
+  h6 { @apply text-base md:text-lg leading-snug; }
 
-  .btn { @apply inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2; }
-  .btn-primary { @apply bg-primary-700 text-white hover:bg-primary-800 focus:ring-primary-500 shadow-card; }
-  .btn-secondary { @apply bg-white text-neutral-warm-900 border border-neutral-warm-300 hover:bg-neutral-warm-25; }
+  p { @apply text-neutral-warm-600 leading-relaxed; }
 
-  .card { @apply bg-white rounded-2xl shadow-card border border-neutral-warm-100; }
-  .form-input { @apply w-full px-4 py-3 bg-white border border-neutral-warm-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 text-neutral-warm-900 placeholder-neutral-warm-400; }
-
-  .container-custom { @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8; }
+  a {
+    @apply text-primary-700 hover:text-primary-900 transition-colors duration-200;
+  }
 }
 
 @layer components {
-  .hero-section { @apply py-20 lg:py-28 bg-white; }
-  .feature-card { @apply p-6 bg-white rounded-2xl shadow-card border border-neutral-warm-100; }
-  .testimonial-card { @apply p-8 bg-white rounded-2xl shadow-card border border-neutral-warm-100; }
-  .faq-item { @apply border border-neutral-warm-200 rounded-xl overflow-hidden bg-white shadow-card; }
-  .nav-link { @apply text-neutral-warm-700 hover:text-neutral-warm-900; }
-}
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
 
-/* Typography improvements - Spline Sans for headings */
-h1, h2, h3, h4, h5, h6 {
-  @apply font-sans font-semibold tracking-tight text-neutral-warm-900;
-}
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer;
+  }
+  .btn-primary {
+    @apply bg-primary-900 text-white hover:bg-primary-800 focus:ring-primary-500 shadow-medium hover:shadow-large px-6 py-3;
+  }
+  .btn-secondary {
+    @apply bg-white text-primary-900 border border-primary-900 hover:bg-primary-50 focus:ring-primary-500 px-6 py-3;
+  }
+  .btn-gold {
+    @apply bg-gold-500 text-white hover:bg-gold-600 focus:ring-gold-400 shadow-medium hover:shadow-large px-6 py-3;
+  }
+  .btn-whatsapp {
+    @apply bg-[#25D366] text-white hover:bg-[#1da851] focus:ring-[#25D366] shadow-glow-green px-6 py-3;
+  }
+  .btn-outline-white {
+    @apply bg-white/10 text-white border border-white/30 hover:bg-white/20 focus:ring-white px-6 py-3;
+  }
 
-h1 {
-  @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
-}
+  /* Cards */
+  .card {
+    @apply bg-white rounded-2xl shadow-card border border-neutral-warm-100 transition-all duration-300;
+  }
+  .card-hover {
+    @apply hover:shadow-medium hover:-translate-y-1;
+  }
 
-h2 {
-  @apply text-3xl md:text-4xl lg:text-5xl leading-tight;
-}
+  /* Section helpers */
+  .section { @apply py-16 md:py-20 lg:py-24; }
+  .section-sm { @apply py-12 md:py-16; }
 
-h3 {
-  @apply text-2xl md:text-3xl leading-snug;
-}
+  /* Gold badge */
+  .badge-gold {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 bg-gold-500/10 border border-gold-500/30 rounded-full text-gold-600 text-xs font-semibold uppercase tracking-wide;
+  }
 
-h4 {
-  @apply text-xl md:text-2xl leading-snug;
-}
+  /* Trust chip */
+  .trust-chip {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/10 border border-white/20 rounded-lg text-white text-sm font-medium;
+  }
 
-h5 {
-  @apply text-lg md:text-xl leading-snug;
-}
+  /* Nav link */
+  .nav-link {
+    @apply text-neutral-warm-700 hover:text-primary-900 font-medium transition-colors duration-200;
+  }
 
-h6 {
-  @apply text-base md:text-lg leading-snug;
-}
+  /* Section with navy background */
+  .section-navy {
+    @apply bg-primary-950 text-white;
+  }
 
-p {
-  @apply text-neutral-warm-600 leading-relaxed;
-}
+  /* WhatsApp button pulsing ring */
+  @keyframes wa-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+    50% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+  }
+  .wa-pulse {
+    animation: wa-pulse 2.5s ease-in-out infinite;
+  }
 
-/* Link styles */
-a {
-  @apply text-primary-700 hover:text-primary-800 transition-colors duration-200;
-}
-
-/* Button base styles - Spline Sans for UI elements */
-.btn {
-  @apply font-sans inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-xl;
-  @apply transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
-}
-
-.btn-primary {
-  @apply bg-primary-900 text-white hover:bg-primary-800;
-  @apply focus:ring-primary-500 shadow-card;
-}
-
-.btn-secondary {
-  @apply bg-white text-primary-900 border border-primary-900;
-  @apply hover:bg-primary-50 focus:ring-primary-500;
-}
-
-/* Card styles exactly like LawTrades */
-.card {
-  @apply bg-white rounded-2xl shadow-card border border-neutral-warm-100;
-  @apply transition-all duration-300;
-}
-
-/* Professional form inputs like LawTrades */
-.form-input {
-  @apply w-full px-4 py-3 bg-neutral-warm-50 border border-neutral-warm-200 rounded-xl;
-  @apply focus:ring-2 focus:ring-primary-500 focus:border-primary-500;
-  @apply transition-colors duration-200 text-neutral-warm-900;
-}
-
-/* LawTrades-style gradient backgrounds */
-.gradient-bg {
-  @apply bg-gradient-to-br from-white to-neutral-warm-50;
-}
-
-/* Professional section spacing like LawTrades */
-.professional-section {
-  @apply py-20 lg:py-24;
-}
-
-/* Clean grid layouts */
-.feature-grid-lawtrades {
-  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
-}
-
-/* Professional buttons exactly like LawTrades */
-.btn-lawtrades {
-  @apply font-sans inline-flex items-center justify-center gap-3 px-6 py-3;
-  @apply font-semibold rounded-xl transition-all duration-200;
-  @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
-}
-
-.btn-lawtrades-primary {
-  @apply bg-primary-600 hover:bg-primary-700 text-white;
-  @apply focus:ring-primary-500 shadow-medium hover:shadow-large;
-}
-
-.btn-lawtrades-secondary {
-  @apply bg-white hover:bg-neutral-warm-50 text-primary-600;
-  @apply border border-primary-600 focus:ring-primary-500;
-}
-
-/* Section backgrounds like LawTrades */
-.section-teal {
-  @apply bg-primary-900 text-white;
-}
-
-.section-light {
-  @apply bg-neutral-warm-50;
-}
-
-.section-white {
-  @apply bg-white;
-}
-
-/* Container improvements */
-.container-custom {
-  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+  /* Gold accent text */
+  .text-gold { @apply text-gold-500; }
+  .text-gold-light { @apply text-gold-400; }
 }
 
 /* Focus styles for accessibility */
-*:focus {
-  @apply outline-none;
-}
-
 *:focus-visible {
-  @apply ring-2 ring-primary-500 ring-offset-2;
+  @apply ring-2 ring-primary-500 ring-offset-2 outline-none;
 }

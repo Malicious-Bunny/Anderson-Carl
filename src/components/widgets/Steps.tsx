@@ -1,55 +1,49 @@
-import Image from 'next/image';
-import { IconCheck } from '@tabler/icons-react';
 import { StepsProps } from '~/shared/types';
 import WidgetWrapper from '../common/WidgetWrapper';
-import Timeline from '../common/Timeline';
-import Headline from '../common/Headline';
 
-const Steps = ({
-  id,
-  header,
-  items,
-  isImageDisplayed = true,
-  image,
-  isReversed = false,
-  hasBackground = false,
-}: StepsProps) => (
-  <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="max-w-6xl ">
-    <div
-      className={`flex flex-col gap-8 md:gap-12 ${isReversed ? 'md:flex-row-reverse' : ''} ${
-        isImageDisplayed ? 'md:flex-row' : ''
-      }`}
-    >
-      <div
-        className={`md:py-4 ${
-          isImageDisplayed ? 'md:pr-16 md:rtl:pr-0 md:rtl:pl-16 md:basis-1/2' : 'max-w-4xl mx-auto md:self-center'
-        }`}
-      >
-        {header && (
-          <Headline
-            header={header}
-            containerClass={isImageDisplayed ? 'text-left rtl:text-right' : ''}
-            titleClass="text-3xl sm:text-4xl"
-            subtitleClass={isImageDisplayed ? 'text-left rtl:text-right' : ''}
-          />
+const Steps = ({ id, header, items, hasBackground = false }: StepsProps) => (
+  <WidgetWrapper id={id || ''} hasBackground={hasBackground} containerClass="section container-custom">
+    {header && (
+      <div className="text-center max-w-2xl mx-auto mb-14">
+        {header.tagline && (
+          <span className="badge-gold mb-4 inline-block">{header.tagline}</span>
         )}
-        <Timeline items={items} defaultIcon={IconCheck} iconClass="text-primary border-primary-900" />
+        {header.title && (
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-neutral-warm-900 mb-4">
+            {header.title}
+          </h2>
+        )}
+        {header.subtitle && (
+          <p className="text-lg text-neutral-warm-600">{header.subtitle}</p>
+        )}
       </div>
-      {isImageDisplayed && (
-        <div className="relative md:basis-1/2">
-          {image && (
-            <Image
-              src={image.src}
-              width={400}
-              height={768}
-              alt={image.alt}
+    )}
 
-              className="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
-              quality={50}
-            />
-          )}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative">
+      {/* Connecting line (desktop) */}
+      <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-neutral-warm-200 to-transparent" />
+
+      {items?.map(({ title, description, icon: Icon }, index) => (
+        <div key={index} className="relative flex flex-col items-center text-center">
+          {/* Step number circle */}
+          <div className="relative mb-5">
+            <div className="w-20 h-20 rounded-full bg-primary-900 flex items-center justify-center shadow-large border-4 border-white ring-1 ring-primary-900/20">
+              {Icon ? (
+                <Icon className="w-8 h-8 text-white" />
+              ) : (
+                <span className="font-display font-bold text-2xl text-white">{index + 1}</span>
+              )}
+            </div>
+            {/* Gold step number badge */}
+            <div className="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-gold-500 flex items-center justify-center shadow-md">
+              <span className="text-xs font-bold text-white">{index + 1}</span>
+            </div>
+          </div>
+
+          <h3 className="font-display text-xl font-bold text-neutral-warm-900 mb-2">{title}</h3>
+          <p className="text-sm text-neutral-warm-600 leading-relaxed">{description}</p>
         </div>
-      )}
+      ))}
     </div>
   </WidgetWrapper>
 );

@@ -1,25 +1,22 @@
 import { StatsProps } from '~/shared/types';
-import { getSuffixNumber } from '~/utils/utils';
-import WidgetWrapper from '../common/WidgetWrapper';
 
-const Stats = ({ items, id, hasBackground = false }: StatsProps) => (
-  <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="">
-    <div className="row-gap-8 grid grid-cols-2 md:grid-cols-4">
-      {items.map(({ title, description }, index) => (
-        <div
-          key={`item-stat-${index}`}
-          className="mb-12 text-center md:mb-0 md:border-r md:last:border-none dark:md:border-slate-500"
-        >
-          <div className="font-heading text-primary text-[2.6rem] font-bold dark:text-white lg:text-5xl xl:text-6xl">
-            {title}
+const Stats = ({ items, id }: StatsProps) => (
+  <section id={id} className="bg-white border-b border-neutral-warm-100">
+    <div className="container-custom">
+      <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-neutral-warm-100">
+        {items.map(({ title, description }, index) => (
+          <div key={index} className="py-10 px-6 text-center">
+            <div className="font-display text-4xl lg:text-5xl font-bold text-primary-900 mb-2">
+              {title}
+            </div>
+            <p className="text-sm font-semibold uppercase tracking-widest text-neutral-warm-500">
+              {description}
+            </p>
           </div>
-          <p className="text-sm font-medium uppercase tracking-widest text-gray-800 dark:text-slate-400 lg:text-base">
-            {description}
-          </p>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
-  </WidgetWrapper>
+  </section>
 );
 
 export default Stats;

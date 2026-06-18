@@ -1,53 +1,51 @@
 import { FeaturesProps } from '~/shared/types';
 import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
-import CTA from '../common/CTA';
 
 const Features = ({ id, header, items, columns = 3, hasBackground = false }: FeaturesProps) => (
-  <WidgetWrapper
-    id={id ? id : ''}
-    hasBackground={hasBackground}
-    containerClass="section-spacing container-custom"
-  >
+  <WidgetWrapper id={id || ''} hasBackground={hasBackground} containerClass="section container-custom">
     {header && (
-      <div className="text-center max-w-3xl mx-auto mb-12">
-        <Headline
-          header={header}
-          titleClass="text-4xl md:text-5xl font-bold text-neutral-warm-900 mb-3 tracking-tight"
-          subtitleClass="text-base md:text-lg text-neutral-warm-600 leading-relaxed"
-        />
+      <div className="text-center max-w-3xl mx-auto mb-14">
+        {header.tagline && (
+          <span className="badge-gold mb-4 inline-block">{header.tagline}</span>
+        )}
+        {header.title && (
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-neutral-warm-900 mb-4">
+            {header.title}
+          </h2>
+        )}
+        {header.subtitle && (
+          <p className="text-lg text-neutral-warm-600">{header.subtitle}</p>
+        )}
       </div>
     )}
 
     {items && (
-      <div className={`${columns === 4 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4' : columns === 2 ? 'grid grid-cols-1 md:grid-cols-2' : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'} gap-6 lg:gap-8`}>
-        {items.map(({ title, description, callToAction }, index) => (
+      <div className={`grid gap-6 ${
+        columns === 4 ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4' :
+        columns === 2 ? 'grid-cols-1 md:grid-cols-2' :
+        'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+      }`}>
+        {items.map(({ title, description, icon: Icon }, index) => (
           <div
-            key={id ? `feature-${id}-${index}` : `feature-${index}`}
-            className="bg-white rounded-2xl border border-neutral-warm-200 shadow-card p-6 md:p-7"
+            key={index}
+            className="group card card-hover p-7 flex flex-col gap-4"
           >
-            <div className="space-y-3">
-              {title && (
-                <h3 className="text-lg md:text-xl font-bold text-neutral-warm-900 leading-tight">
-                  {title}
-                </h3>
-              )}
-
-              {description && (
-                <p className="text-neutral-warm-600 leading-relaxed">
-                  {description}
-                </p>
-              )}
-
-              {callToAction && (
-                <div className="pt-2">
-                  <CTA
-                    callToAction={callToAction}
-                    linkClass="inline-flex items-center gap-2 text-primary-700 hover:text-primary-800 font-semibold"
-                  />
-                </div>
-              )}
-            </div>
+            {Icon && (
+              <div className="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center group-hover:bg-primary-900 transition-colors duration-300 flex-shrink-0">
+                <Icon className="w-6 h-6 text-primary-900 group-hover:text-white transition-colors duration-300" />
+              </div>
+            )}
+            {title && (
+              <h3 className="text-lg font-bold text-neutral-warm-900 font-display">
+                {title}
+              </h3>
+            )}
+            {description && (
+              <p className="text-sm text-neutral-warm-600 leading-relaxed">
+                {description as string}
+              </p>
+            )}
           </div>
         ))}
       </div>

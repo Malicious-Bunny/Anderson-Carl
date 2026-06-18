@@ -60,8 +60,9 @@ export const heroHome: HeroProps = {
     </>
   ),
   callToAction: {
-    text: 'Get Free Consultation',
-    href: '/contact',
+    text: 'WhatsApp Us Now',
+    href: 'https://wa.me/447578141755?text=Hello%20Anderson%20Carl%2C%20I%20would%20like%20to%20enquire%20about%20your%20UK%20document%20services.',
+    targetBlank: true,
     icon: IconBrandWhatsapp,
   },
   callToAction2: {
@@ -154,8 +155,9 @@ export const featuresHome: FeaturesProps = {
   hasBackground: false,
   columns: 4,
   header: {
-    title: 'Why Choose Anderson Carl',
-    subtitle: 'Anderson Carl - Document Specialist',
+    tagline: 'Why Anderson Carl',
+    title: 'Professional. Trusted. Results.',
+    subtitle: 'We handle everything from application to delivery so you can focus on what matters.',
   },
   items: [
     {
@@ -186,9 +188,9 @@ export const servicesHome: ServicesProps = {
   id: 'services-on-home',
   hasBackground: true,
   header: {
-    title: 'OUR DOCUMENT SERVICES',
-    subtitle: 'COMPREHENSIVE UK DOCUMENT ASSISTANCE',
-    highlight: 'Choose Anderson Carl for hassle-free UK document assistance – we manage your applications and follow-ups from start to finish with professional expertise.',
+    tagline: 'Our Services',
+    title: 'UK Document Services',
+    subtitle: 'Comprehensive assistance for all your UK document needs — handled start to finish.',
   },
   items: [
     {
@@ -344,8 +346,9 @@ export const stepsHome: StepsProps = {
   id: 'steps-on-home',
   hasBackground: false,
   header: {
-    title: 'Our Work Process',
-    subtitle: 'Seamless and Efficient',
+    tagline: 'How It Works',
+    title: 'Simple 4-Step Process',
+    subtitle: 'From your first WhatsApp message to receiving your documents — we handle it all.',
   },
   items: [
     {
@@ -384,8 +387,9 @@ export const testimonialsHome: TestimonialsProps = {
   id: 'testimonials-on-home',
   hasBackground: true,
   header: {
-    title: 'CLIENT TESTIMONIALS',
-    subtitle: 'CUSTOMERS FEEDBACK',
+    tagline: 'Client Reviews',
+    title: 'What Our Clients Say',
+    subtitle: 'Over 5,000 successful applications with a 4.9 star rating.',
   },
   testimonials: [
     {
@@ -421,20 +425,13 @@ export const testimonialsHome: TestimonialsProps = {
 // Call to action data on Home page *******************
 export const callToActionHome: CallToActionProps = {
   id: 'callToAction-on-home',
-  hasBackground: true,
-  title: 'THE PROFESSIONAL CONSULTATION',
-  subtitle: 'You deserve a smooth UK document application process.',
+  hasBackground: false,
+  title: 'Ready to Get Your Documents?',
+  subtitle: 'Message us on WhatsApp and our expert team will guide you through the entire process — no paperwork headaches, no waiting rooms, no stress.',
   callToAction: {
-    text: 'Get A Consultation',
-    href: '/contact',
+    text: 'Start on WhatsApp — It\'s Free',
+    href: 'https://wa.me/447578141755?text=Hello%20Anderson%20Carl%2C%20I%20would%20like%20to%20enquire%20about%20your%20UK%20document%20services.',
+    targetBlank: true,
     icon: IconBrandWhatsapp,
   },
-  items: [
-    {
-      title: 'Let us handle the hard part for you! Our expert consultation service provides full support for your UK document applications – from start to finish. We go the extra mile by managing all follow-ups on your behalf.',
-    },
-    {
-      title: 'We are here to answer your questions 24/7',
-    },
-  ],
 };

@@ -100,9 +100,10 @@ export const headerData: HeaderProps = {
   ],
   actions: [
     {
-      text: 'support@andersoncarlconsultancy.uk',
-      href: 'mailto:support@andersoncarlconsultancy.uk',
-      icon: IconMail,
+      text: 'WhatsApp Us',
+      href: 'https://wa.me/447578141755?text=Hello%20Anderson%20Carl%2C%20I%20would%20like%20to%20enquire%20about%20your%20UK%20document%20services.',
+      targetBlank: true,
+      icon: IconBrandWhatsapp,
     },
   ],
   isSticky: true,
@@ -192,7 +193,7 @@ export const footerData: FooterProps = {
     { label: 'Privacy Policy', href: '/privacy' },
   ],
   socials: [
-    { label: 'WhatsApp', icon: IconBrandWhatsapp, href: 'https://wa.me/44746951543' },
+    { label: 'WhatsApp', icon: IconBrandWhatsapp, href: 'https://wa.me/447578141755?text=Hello%20Anderson%20Carl%2C%20I%20would%20like%20to%20enquire%20about%20your%20UK%20document%20services.' },
   ],
   footNote: '© 2025 Anderson Carl Life in the UK Documents. All rights reserved. | Professional documentation services for UK residents.',
   theme: 'dark',
