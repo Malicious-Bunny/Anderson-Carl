@@ -163,7 +163,7 @@ export const teamAbout: TeamProps = {
       social: [
         {
           icon: IconBrandWhatsapp,
-          href: 'https://wa.me/44746951543',
+          href: 'https://wa.me/447529418057',
         },
         {
           icon: IconMail,
@@ -240,9 +240,9 @@ export const contactAbout: ContactProps = {
     },
     {
       title: 'WhatsApp',
-      description: '+44 7578 141755',
+      description: '+44 7529 418057',
       icon: IconBrandWhatsapp,
-      href: 'https://wa.me/447578141755',
+      href: 'https://wa.me/447529418057',
     },
     {
       title: 'Office Location',

@@ -101,7 +101,7 @@ This message was sent via the Anderson Carl Consultancy contact form.
             inputs.map(({ type, label, name, autocomplete, placeholder }, index) => (
               <div key={`item-input-${index}`} className="mx-0 mb-4 sm:mb-6">
                 {label && (
-                  <label htmlFor={name} className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <label htmlFor={name} className="block mb-2 text-sm font-medium text-gray-700">
                     {label}
                   </label>
                 )}
@@ -113,7 +113,7 @@ This message was sent via the Anderson Carl Consultancy contact form.
                   value={inputValues[name] || ''}
                   onChange={changeInputValueHandler}
                   placeholder={placeholder}
-                  className="w-full rounded-md border border-gray-400 py-3 px-4 shadow-md dark:text-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-500 focus:outline-none"
+                  className="w-full rounded-md border border-gray-400 py-3 px-4 shadow-md focus:border-primary-500 focus:ring-2 focus:ring-primary-500 focus:outline-none"
                 />
               </div>
             ))}
@@ -121,7 +121,7 @@ This message was sent via the Anderson Carl Consultancy contact form.
         {/* Radio buttons */}
         {radioBtns && (
           <div className="mx-0 mb-4 sm:mb-6">
-            <label className="block mb-3 text-sm font-medium text-gray-700 dark:text-gray-300">{radioBtns?.label}</label>
+            <label className="block mb-3 text-sm font-medium text-gray-700">{radioBtns?.label}</label>
             <div className="space-y-2">
               {radioBtns.radios.map(({ label }, index) => (
                 <div key={`radio-btn-${index}`} className="flex items-center">
@@ -132,9 +132,9 @@ This message was sent via the Anderson Carl Consultancy contact form.
                     value={`value${index}`}
                     checked={radioBtnValue === `value${index}`}
                     onChange={changeRadioBtnsHandler}
-                    className="cursor-pointer w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    className="cursor-pointer w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 focus:ring-primary-500 focus:ring-2"
                   />
-                  <label htmlFor={`radio-${index}`} className="ml-3 text-sm text-gray-700 dark:text-gray-300 cursor-pointer">
+                  <label htmlFor={`radio-${index}`} className="ml-3 text-sm text-gray-700 cursor-pointer">
                     {label}
                   </label>
                 </div>
@@ -146,7 +146,7 @@ This message was sent via the Anderson Carl Consultancy contact form.
         {textarea && (
           <div className={`mx-0 mb-4 sm:mb-6`}>
             {textarea.label && (
-              <label htmlFor={textarea.name} className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+              <label htmlFor={textarea.name} className="block mb-2 text-sm font-medium text-gray-700">
                 {textarea.label}
               </label>
             )}
@@ -158,7 +158,7 @@ This message was sent via the Anderson Carl Consultancy contact form.
               value={textareaValues}
               onChange={(e) => changeTextareaHandler(e)}
               placeholder={textarea.placeholder}
-              className="w-full rounded-md border border-gray-400 py-3 px-4 shadow-md dark:text-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-500 focus:outline-none"
+              className="w-full rounded-md border border-gray-400 py-3 px-4 shadow-md focus:border-primary-500 focus:ring-2 focus:ring-primary-500 focus:outline-none"
             />
           </div>
         )}
@@ -173,9 +173,9 @@ This message was sent via the Anderson Carl Consultancy contact form.
                   name="agreement"
                   checked={checkedState[index]}
                   onChange={() => changeCheckboxHandler(index)}
-                  className="cursor-pointer w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 rounded focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  className="cursor-pointer w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 rounded focus:ring-primary-500 focus:ring-2"
                 />
-                <label htmlFor={`checkbox-${index}`} className="ml-3 text-sm text-gray-700 dark:text-gray-300 cursor-pointer">
+                <label htmlFor={`checkbox-${index}`} className="ml-3 text-sm text-gray-700 cursor-pointer">
                   {label}
                 </label>
               </div>

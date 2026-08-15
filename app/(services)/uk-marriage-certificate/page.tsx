@@ -10,7 +10,7 @@ export default function UKMarriageCertificateService() {
     <>
       {/* Hero Section */}
       <section
-        className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-16 overflow-hidden"
+        className="relative bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 text-white py-16 overflow-hidden"
         style={{
           backgroundImage: 'url(https://ugc.same-assets.com/C26WX87D1q5SnKvn0IvW2Zx8t4yVoUn5.jpeg)',
           backgroundSize: 'cover',
@@ -141,7 +141,7 @@ export default function UKMarriageCertificateService() {
                   Start Your Application
                 </Link>
                 <a
-                  href="https://wa.me/447469515438?text=Hello Anderson Carl, I need assistance with obtaining a UK marriage certificate."
+                  href="https://wa.me/447529418057?text=Hello Anderson Carl, I need assistance with obtaining a UK marriage certificate."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary w-full text-center block text-lg py-3"

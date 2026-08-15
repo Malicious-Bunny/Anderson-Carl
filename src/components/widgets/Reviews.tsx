@@ -59,7 +59,7 @@ const ReviewCard = ({ review }: { review: Review }) => (
       <div className="text-sm text-gray-500">
         {new Date(review.dateSubmitted).toLocaleDateString()}
         {review.isVerified && (
-          <span className="ml-2 inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+          <span className="ml-2 inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gold-500/10 text-gold-600">
             Verified
           </span>
         )}

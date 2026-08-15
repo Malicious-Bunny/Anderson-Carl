@@ -122,7 +122,7 @@ export const MENU = [
 ];
 
 export const LINKS = {
-  whatsapp: 'https://wa.me/447469515438',
+  whatsapp: 'https://wa.me/447529418057',
   email: 'support@andersoncarlconsultancy.uk',
   github: '',
   twitter: '',

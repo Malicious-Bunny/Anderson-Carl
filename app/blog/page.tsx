@@ -53,7 +53,7 @@ interface BlogCardProps {
 
 function BlogCard({ post }: BlogCardProps) {
   return (
-    <article className="group relative bg-white dark:bg-slate-900 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-800">
+    <article className="group relative bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100">
       {post.image && (
         <div className="relative h-48 overflow-hidden">
           <Image
@@ -71,7 +71,7 @@ function BlogCard({ post }: BlogCardProps) {
       )}
 
       <div className="p-6">
-        <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-3">
+        <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
           <time dateTime={post.date}>{formatDate(post.date)}</time>
           <span>•</span>
           <span>{post.readingTime} min read</span>
@@ -79,13 +79,13 @@ function BlogCard({ post }: BlogCardProps) {
           <span>By {post.author}</span>
         </div>
 
-        <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+        <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
           <Link href={`/blog/${post.slug}`} className="block">
             {post.title}
           </Link>
         </h2>
 
-        <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+        <p className="text-gray-600 mb-4 line-clamp-3">
           {post.excerpt}
         </p>
 
@@ -94,7 +94,7 @@ function BlogCard({ post }: BlogCardProps) {
             {post.tags.slice(0, 3).map((tag) => (
               <span
                 key={tag}
-                className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
+                className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800"
               >
                 {tag}
               </span>
@@ -103,7 +103,7 @@ function BlogCard({ post }: BlogCardProps) {
 
           <Link
             href={`/blog/${post.slug}`}
-            className="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium text-sm transition-colors"
+            className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium text-sm transition-colors"
           >
             Read more →
           </Link>
@@ -135,8 +135,8 @@ export default function BlogPage() {
               position: "center"
             }}
             containerClass="text-center"
-            titleClass="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white"
-            subtitleClass="text-xl text-gray-600 dark:text-gray-300 mt-4 max-w-3xl mx-auto"
+            titleClass="text-4xl md:text-5xl font-bold text-gray-900"
+            subtitleClass="text-xl text-gray-600 mt-4 max-w-3xl mx-auto"
           />
         </div>
       </WidgetWrapper>
@@ -147,10 +147,10 @@ export default function BlogPage() {
         {/* Featured Post */}
         {featuredPosts.length > 0 && (
           <div className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Featured Article</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Featured Article</h2>
             <div className="grid gap-8">
               {featuredPosts.map((post) => (
-                <article key={post.slug} className="relative bg-white dark:bg-slate-900 rounded-xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-800 lg:grid lg:grid-cols-2 lg:gap-8">
+                <article key={post.slug} className="relative bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 lg:grid lg:grid-cols-2 lg:gap-8">
                   {post.image && (
                     <div className="relative h-64 lg:h-auto">
                       <Image
@@ -162,7 +162,7 @@ export default function BlogPage() {
                     </div>
                   )}
                   <div className="p-8 lg:py-12">
-                    <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
+                    <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
                       <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary-500 text-white">
                         Featured
                       </span>
@@ -171,13 +171,13 @@ export default function BlogPage() {
                       <span>{post.readingTime} min read</span>
                     </div>
 
-                    <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                      <Link href={`/blog/${post.slug}`} className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                      <Link href={`/blog/${post.slug}`} className="hover:text-primary-600 transition-colors">
                         {post.title}
                       </Link>
                     </h2>
 
-                    <p className="text-gray-600 dark:text-gray-300 mb-6 text-lg">
+                    <p className="text-gray-600 mb-6 text-lg">
                       {post.excerpt}
                     </p>
 
@@ -197,11 +197,11 @@ export default function BlogPage() {
         {/* Categories Filter */}
         {categories.length > 0 && (
           <div className="mb-8">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Browse by Category</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Browse by Category</h3>
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/blog"
-                className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 hover:bg-primary-200 dark:hover:bg-primary-800 transition-colors"
+                className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-primary-100 text-primary-800 hover:bg-primary-200 transition-colors"
               >
                 All Posts
               </Link>
@@ -209,7 +209,7 @@ export default function BlogPage() {
                 <Link
                   key={category}
                   href={`/blog?category=${encodeURIComponent(category)}`}
-                  className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                  className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
                 >
                   {category}
                 </Link>
@@ -227,10 +227,10 @@ export default function BlogPage() {
           </div>
         ) : (
           <div className="text-center py-12">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
               No blog posts yet
             </h3>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-gray-600">
               Check back soon for expert insights and updates on UK document services.
             </p>
           </div>

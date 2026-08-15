@@ -162,7 +162,7 @@ const Page = () => {
               Start Your WhatsApp Consultation
             </a>
             <p className="mt-4 text-xs text-neutral-warm-400">
-              +44 7578 141755 · Available 24 hours, 7 days
+              +44 7529 418057 · Available 24 hours, 7 days
             </p>
           </div>
         </div>

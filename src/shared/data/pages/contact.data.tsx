@@ -40,9 +40,9 @@ export const contact2Contact: ContactProps = {
     },
     {
       title: 'WhatsApp',
-      description: '+44 7578 141755',
+      description: '+44 7529 418057',
       icon: IconBrandWhatsapp,
-      href: 'https://wa.me/447578141755',
+      href: 'https://wa.me/447529418057',
     },
     {
       title: 'Office Location',

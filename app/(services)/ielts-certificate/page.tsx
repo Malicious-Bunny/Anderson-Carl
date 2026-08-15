@@ -11,7 +11,7 @@ export default function IELTSCertificateService() {
     <>
       {/* Hero Section */}
       <section
-        className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-16 overflow-hidden"
+        className="relative bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 text-white py-16 overflow-hidden"
         style={{
           backgroundImage: 'url(https://ugc.same-assets.com/65sRigiYWGYbjTKWWvPsVQh9Yk8giTxw.jpeg)',
           backgroundSize: 'cover',
@@ -19,7 +19,7 @@ export default function IELTSCertificateService() {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="absolute inset-0 bg-blue-900/80" />
+        <div className="absolute inset-0 bg-primary-950/80" />
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <nav className="text-primary-200 mb-4">
@@ -36,7 +36,7 @@ export default function IELTSCertificateService() {
             </p>
             <div className="bg-white/10 rounded-lg p-6 inline-block">
               <p className="text-2xl font-bold text-white mb-2">Service Fee: £600</p>
-              <p className="text-green-200 mb-2">Processing Time: 3 days</p>
+              <p className="text-gold-300 mb-2">Processing Time: 3 days</p>
               <p className="text-primary-200">Comprehensive IELTS certification assistance</p>
             </div>
           </div>
@@ -122,9 +122,9 @@ export default function IELTSCertificateService() {
                 </li>
               </ul>
 
-              <div className="bg-blue-900 text-white rounded-lg p-6 mb-6">
+              <div className="bg-primary-900 text-white rounded-lg p-6 mb-6">
                 <h4 className="text-lg font-semibold mb-3">Service Fee: £600</h4>
-                <p className="text-green-200 mb-2"><strong>Processing Time: 3 days</strong></p>
+                <p className="text-gold-300 mb-2"><strong>Processing Time: 3 days</strong></p>
                 <p className="text-primary-200 mb-4">
                   Includes test registration assistance, preparation guidance,
                   and certificate support services.
@@ -142,7 +142,7 @@ export default function IELTSCertificateService() {
                   Start Your IELTS Journey
                 </Link>
                 <a
-                  href="https://wa.me/447469515438?text=Hello Anderson Carl, I need assistance with IELTS certification."
+                  href="https://wa.me/447529418057?text=Hello Anderson Carl, I need assistance with IELTS certification."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary w-full text-center block text-lg py-3"
@@ -165,7 +165,7 @@ export default function IELTSCertificateService() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="bg-blue-900 text-white w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              <div className="bg-primary-900 text-white w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 01
               </div>
               <h3 className="text-xl font-bold text-primary-900 mb-3">Assessment & Planning</h3>
@@ -174,7 +174,7 @@ export default function IELTSCertificateService() {
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-blue-900 text-white w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              <div className="bg-primary-900 text-white w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 02
               </div>
               <h3 className="text-xl font-bold text-primary-900 mb-3">Test Registration</h3>
@@ -183,7 +183,7 @@ export default function IELTSCertificateService() {
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-blue-900 text-white w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              <div className="bg-primary-900 text-white w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 03
               </div>
               <h3 className="text-xl font-bold text-primary-900 mb-3">Preparation Support</h3>
@@ -192,7 +192,7 @@ export default function IELTSCertificateService() {
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-blue-900 text-white w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              <div className="bg-primary-900 text-white w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 04
               </div>
               <h3 className="text-xl font-bold text-primary-900 mb-3">Certificate Assistance</h3>
@@ -254,7 +254,7 @@ export default function IELTSCertificateService() {
       />
 
       {/* Contact CTA */}
-      <section className="py-16 bg-blue-900 text-white">
+      <section className="py-16 bg-primary-900 text-white">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Start Your IELTS Journey?</h2>

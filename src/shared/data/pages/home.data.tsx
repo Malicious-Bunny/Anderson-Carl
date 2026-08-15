@@ -61,7 +61,7 @@ export const heroHome: HeroProps = {
   ),
   callToAction: {
     text: 'WhatsApp Us Now',
-    href: 'https://wa.me/447578141755?text=Hello%20Anderson%20Carl%2C%20I%20would%20like%20to%20enquire%20about%20your%20UK%20document%20services.',
+    href: 'https://wa.me/447529418057?text=Hello%20Anderson%20Carl%2C%20I%20would%20like%20to%20enquire%20about%20your%20UK%20document%20services.',
     targetBlank: true,
     icon: IconBrandWhatsapp,
   },
@@ -430,7 +430,7 @@ export const callToActionHome: CallToActionProps = {
   subtitle: 'Message us on WhatsApp and our expert team will guide you through the entire process — no paperwork headaches, no waiting rooms, no stress.',
   callToAction: {
     text: 'Start on WhatsApp — It\'s Free',
-    href: 'https://wa.me/447578141755?text=Hello%20Anderson%20Carl%2C%20I%20would%20like%20to%20enquire%20about%20your%20UK%20document%20services.',
+    href: 'https://wa.me/447529418057?text=Hello%20Anderson%20Carl%2C%20I%20would%20like%20to%20enquire%20about%20your%20UK%20document%20services.',
     targetBlank: true,
     icon: IconBrandWhatsapp,
   },

@@ -19,8 +19,8 @@ export const announcementData: AnnouncementProps = {
     href: 'mailto:support@andersoncarlconsultancy.uk',
   },
   callToAction2: {
-    text: 'WhatsApp: +44 7578 141755',
-    href: 'https://wa.me/447578141755',
+    text: 'WhatsApp: +44 7529 418057',
+    href: 'https://wa.me/447529418057',
   },
 };
 
@@ -101,7 +101,7 @@ export const headerData: HeaderProps = {
   actions: [
     {
       text: 'WhatsApp Us',
-      href: 'https://wa.me/447578141755?text=Hello%20Anderson%20Carl%2C%20I%20would%20like%20to%20enquire%20about%20your%20UK%20document%20services.',
+      href: 'https://wa.me/447529418057?text=Hello%20Anderson%20Carl%2C%20I%20would%20like%20to%20enquire%20about%20your%20UK%20document%20services.',
       targetBlank: true,
       icon: IconBrandWhatsapp,
     },
@@ -193,7 +193,7 @@ export const footerData: FooterProps = {
     { label: 'Privacy Policy', href: '/privacy' },
   ],
   socials: [
-    { label: 'WhatsApp', icon: IconBrandWhatsapp, href: 'https://wa.me/447578141755?text=Hello%20Anderson%20Carl%2C%20I%20would%20like%20to%20enquire%20about%20your%20UK%20document%20services.' },
+    { label: 'WhatsApp', icon: IconBrandWhatsapp, href: 'https://wa.me/447529418057?text=Hello%20Anderson%20Carl%2C%20I%20would%20like%20to%20enquire%20about%20your%20UK%20document%20services.' },
   ],
   footNote: '© 2025 Anderson Carl Life in the UK Documents. All rights reserved. | Professional documentation services for UK residents.',
   theme: 'dark',
@@ -217,9 +217,9 @@ export const contactData = {
     },
     {
       title: 'WhatsApp',
-      description: '+44 7578 141755',
+      description: '+44 7529 418057',
       icon: IconBrandWhatsapp,
-      href: 'https://wa.me/447578141755',
+      href: 'https://wa.me/447529418057',
     },
     {
       title: 'Office Location',

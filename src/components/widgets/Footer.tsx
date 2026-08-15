@@ -53,7 +53,7 @@ const Footer = () => {
                 className="flex items-center gap-2 text-sm text-[#25D366] hover:text-green-400 transition-colors duration-200 cursor-pointer"
               >
                 <WhatsAppIcon />
-                +44 7578 141755
+                +44 7529 418057
               </a>
               <a
                 href={`mailto:${EMAIL}`}

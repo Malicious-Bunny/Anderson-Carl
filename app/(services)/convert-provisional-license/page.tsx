@@ -55,9 +55,9 @@ export default function ConvertProvisionalLicenseService() {
                 Professional License Conversion
               </h2>
               <div className="space-y-6">
-                <div className="bg-green-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-green-800">Our Service Includes</h3>
-                  <ul className="text-green-700 space-y-2">
+                <div className="bg-gold-500/10 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-3 text-gold-700">Our Service Includes</h3>
+                  <ul className="text-gold-600 space-y-2">
                     <li>• Complete DVLA application processing</li>
                     <li>• Driving test booking assistance</li>
                     <li>• Theory test arrangement (if required)</li>
@@ -66,9 +66,9 @@ export default function ConvertProvisionalLicenseService() {
                   </ul>
                 </div>
 
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-blue-800">License Categories</h3>
-                  <ul className="text-blue-700 space-y-2">
+                <div className="bg-primary-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-3 text-primary-800">License Categories</h3>
+                  <ul className="text-primary-700 space-y-2">
                     <li>• Category B (Cars and light vehicles)</li>
                     <li>• Category A (Motorcycles)</li>
                     <li>• Category C (Large vehicles/Trucks)</li>
@@ -77,17 +77,17 @@ export default function ConvertProvisionalLicenseService() {
                   </ul>
                 </div>
 
-                <div className="bg-amber-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-amber-800">Processing Time</h3>
-                  <p className="text-amber-700">
+                <div className="bg-gold-500/10 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-3 text-gold-700">Processing Time</h3>
+                  <p className="text-gold-600">
                     Application processing: 1-2 weeks after test completion.
                     We can arrange expedited test dates and fast-track the entire process.
                   </p>
                 </div>
 
-                <div className="bg-purple-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-purple-800">Test Assistance</h3>
-                  <ul className="text-purple-700 space-y-2">
+                <div className="bg-neutral-warm-100 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-3 text-primary-800">Test Assistance</h3>
+                  <ul className="text-primary-700 space-y-2">
                     <li>• Theory test booking and preparation</li>
                     <li>• Practical test scheduling</li>
                     <li>• Test center recommendations</li>
@@ -209,8 +209,8 @@ export default function ConvertProvisionalLicenseService() {
               Get Free Consultation
             </Link>
             <a
-              href="https://wa.me/447469515438"
-              className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200"
+              href="https://wa.me/447529418057"
+              className="btn btn-whatsapp"
             >
               WhatsApp Us Now
             </a>

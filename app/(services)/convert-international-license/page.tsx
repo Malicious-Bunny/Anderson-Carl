@@ -55,17 +55,17 @@ export default function ConvertInternationalLicenseService() {
                 No Test Required Conversion
               </h2>
               <div className="space-y-6">
-                <div className="bg-green-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-green-800">Eligible Countries</h3>
-                  <p className="text-green-700">
+                <div className="bg-gold-500/10 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-3 text-gold-700">Eligible Countries</h3>
+                  <p className="text-gold-600">
                     Valid for licenses from EU countries, Australia, New Zealand, Canada, USA, Japan,
                     South Korea, and other designated countries. Contact us to verify your eligibility.
                   </p>
                 </div>
 
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-blue-800">What&apos;s Included</h3>
-                  <ul className="text-blue-700 space-y-2">
+                <div className="bg-primary-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-3 text-primary-800">What&apos;s Included</h3>
+                  <ul className="text-primary-700 space-y-2">
                     <li>• Complete DVLA application processing</li>
                     <li>• Document verification and translation services</li>
                     <li>• Medical form completion assistance</li>
@@ -74,9 +74,9 @@ export default function ConvertInternationalLicenseService() {
                   </ul>
                 </div>
 
-                <div className="bg-amber-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-amber-800">Processing Time</h3>
-                  <p className="text-amber-700">
+                <div className="bg-gold-500/10 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-3 text-gold-700">Processing Time</h3>
+                  <p className="text-gold-600">
                     Standard processing: 2-3 weeks. Express service available for urgent applications.
                     We&apos;ll keep you updated every step of the way.
                   </p>
@@ -145,8 +145,8 @@ export default function ConvertInternationalLicenseService() {
               Get Free Consultation
             </Link>
             <a
-              href="https://wa.me/447469515438"
-              className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200"
+              href="https://wa.me/447529418057"
+              className="btn btn-whatsapp"
             >
               WhatsApp Us Now
             </a>

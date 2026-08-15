@@ -55,9 +55,9 @@ export default function LifeInUKTestService() {
                 No Exam Required Pass
               </h2>
               <div className="space-y-6">
-                <div className="bg-green-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-green-800">What&apos;s Included</h3>
-                  <ul className="text-green-700 space-y-2">
+                <div className="bg-gold-500/10 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-3 text-gold-700">What&apos;s Included</h3>
+                  <ul className="text-gold-600 space-y-2">
                     <li>• Official Life in the UK test pass certificate</li>
                     <li>• Registered in Home Office database</li>
                     <li>• Verifiable test reference number</li>
@@ -66,9 +66,9 @@ export default function LifeInUKTestService() {
                   </ul>
                 </div>
 
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-blue-800">Required For</h3>
-                  <ul className="text-blue-700 space-y-2">
+                <div className="bg-primary-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-3 text-primary-800">Required For</h3>
+                  <ul className="text-primary-700 space-y-2">
                     <li>• UK citizenship applications</li>
                     <li>• Indefinite Leave to Remain (ILR)</li>
                     <li>• Settlement applications</li>
@@ -77,17 +77,17 @@ export default function LifeInUKTestService() {
                   </ul>
                 </div>
 
-                <div className="bg-amber-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-amber-800">Processing Time</h3>
-                  <p className="text-amber-700">
+                <div className="bg-gold-500/10 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-3 text-gold-700">Processing Time</h3>
+                  <p className="text-gold-600">
                     Standard processing: 3-5 working days. Express service available for urgent applications.
                     Certificate is immediately verifiable in the Home Office system.
                   </p>
                 </div>
 
-                <div className="bg-purple-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-purple-800">Test Details</h3>
-                  <ul className="text-purple-700 space-y-2">
+                <div className="bg-neutral-warm-100 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-3 text-primary-800">Test Details</h3>
+                  <ul className="text-primary-700 space-y-2">
                     <li>• Based on official Life in the UK handbook</li>
                     <li>• Covers British history, culture, and traditions</li>
                     <li>• Government and law knowledge</li>
@@ -167,8 +167,8 @@ export default function LifeInUKTestService() {
               Get Free Consultation
             </Link>
             <a
-              href="https://wa.me/447469515438"
-              className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200"
+              href="https://wa.me/447529418057"
+              className="btn btn-whatsapp"
             >
               WhatsApp Us Now
             </a>

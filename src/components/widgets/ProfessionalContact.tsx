@@ -46,15 +46,15 @@ const ProfessionalContact = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-amoled-black">
+    <div className="bg-white">
       {/* Hero Section - LawTrades Inspired */}
-      <section className="py-16 lg:py-24 bg-white dark:bg-amoled-black">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-warm-900 dark:text-amoled-50 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-warm-900 mb-6">
               Immigration case spinning out of control? We&apos;ve got you.
             </h1>
-            <p className="text-lg md:text-xl text-neutral-warm-600 dark:text-amoled-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-neutral-warm-600 mb-8 max-w-3xl mx-auto leading-relaxed">
               DACA renewal urgent? Deportation notice stressing you out? Complex status adjustment?
               Morgan Dauterive instantly connects you with expert immigration attorneys who understand your situation.
             </p>
@@ -67,7 +67,7 @@ const ProfessionalContact = () => {
             </div>
 
             {/* Trust Indicators Row */}
-            <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-neutral-warm-500 dark:text-amoled-400">
+            <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-neutral-warm-500">
               <div className="flex items-center gap-2">
                 <IconShield className="w-4 h-4" />
                 <span>Free consultation</span>
@@ -86,25 +86,25 @@ const ProfessionalContact = () => {
       </section>
 
       {/* Submission Form Section */}
-      <section className="py-16 lg:py-20 bg-neutral-warm-50 dark:bg-amoled-950">
+      <section className="py-16 lg:py-20 bg-neutral-warm-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-warm-900 dark:text-amoled-50 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-warm-900 mb-4">
               Submit your request
             </h2>
-            <p className="text-lg text-neutral-warm-600 dark:text-amoled-300 max-w-2xl mx-auto">
+            <p className="text-lg text-neutral-warm-600 max-w-2xl mx-auto">
               Tell us about your immigration needs and we&apos;ll connect you with the right expert attorney
               who can guide you through the process efficiently.
             </p>
           </div>
 
           <div className="max-w-2xl mx-auto">
-            <div className="bg-white dark:bg-amoled-900 rounded-3xl p-8 lg:p-12 shadow-large border border-neutral-warm-100 dark:border-amoled-700">
+            <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-large border border-neutral-warm-100">
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Fields */}
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="firstName" className="block text-sm font-semibold text-neutral-warm-900 dark:text-amoled-100 mb-3">
+                    <label htmlFor="firstName" className="block text-sm font-semibold text-neutral-warm-900 mb-3">
                       First Name
                     </label>
                     <input
@@ -119,7 +119,7 @@ const ProfessionalContact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="lastName" className="block text-sm font-semibold text-neutral-warm-900 dark:text-amoled-100 mb-3">
+                    <label htmlFor="lastName" className="block text-sm font-semibold text-neutral-warm-900 mb-3">
                       Last Name
                     </label>
                     <input
@@ -138,7 +138,7 @@ const ProfessionalContact = () => {
                 {/* Contact Fields */}
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-neutral-warm-900 dark:text-amoled-100 mb-3">
+                    <label htmlFor="email" className="block text-sm font-semibold text-neutral-warm-900 mb-3">
                       Email Address
                     </label>
                     <input
@@ -153,7 +153,7 @@ const ProfessionalContact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-neutral-warm-900 dark:text-amoled-100 mb-3">
+                    <label htmlFor="phone" className="block text-sm font-semibold text-neutral-warm-900 mb-3">
                       Phone Number
                     </label>
                     <input
@@ -171,7 +171,7 @@ const ProfessionalContact = () => {
 
                 {/* Service Type */}
                 <div>
-                  <label htmlFor="serviceType" className="block text-sm font-semibold text-neutral-warm-900 dark:text-amoled-100 mb-3">
+                  <label htmlFor="serviceType" className="block text-sm font-semibold text-neutral-warm-900 mb-3">
                     Type of Immigration Assistance Needed
                   </label>
                   <select
@@ -200,7 +200,7 @@ const ProfessionalContact = () => {
 
                 {/* Message */}
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-neutral-warm-900 dark:text-amoled-100 mb-3">
+                  <label htmlFor="message" className="block text-sm font-semibold text-neutral-warm-900 mb-3">
                     Tell Us About Your Situation
                   </label>
                   <textarea
@@ -224,9 +224,9 @@ const ProfessionalContact = () => {
                       checked={formData.consent}
                       onChange={handleInputChange}
                       required
-                      className="mt-1 w-4 h-4 text-primary-600 border-neutral-warm-300 dark:border-amoled-600 rounded focus:ring-primary-500"
+                      className="mt-1 w-4 h-4 text-primary-600 border-neutral-warm-300 rounded focus:ring-primary-500"
                     />
-                    <label htmlFor="consent" className="text-sm text-neutral-warm-600 dark:text-amoled-300 leading-relaxed">
+                    <label htmlFor="consent" className="text-sm text-neutral-warm-600 leading-relaxed">
                       I understand that this form does not create an attorney-client relationship and that no confidential information should be included.
                     </label>
                   </div>
@@ -239,9 +239,9 @@ const ProfessionalContact = () => {
                       checked={formData.confidential}
                       onChange={handleInputChange}
                       required
-                      className="mt-1 w-4 h-4 text-primary-600 border-neutral-warm-300 dark:border-amoled-600 rounded focus:ring-primary-500"
+                      className="mt-1 w-4 h-4 text-primary-600 border-neutral-warm-300 rounded focus:ring-primary-500"
                     />
-                    <label htmlFor="confidential" className="text-sm text-neutral-warm-600 dark:text-amoled-300 leading-relaxed">
+                    <label htmlFor="confidential" className="text-sm text-neutral-warm-600 leading-relaxed">
                       I consent to receive communications from Morgan Dauterive LLP regarding my immigration matter.
                     </label>
                   </div>
@@ -256,7 +256,7 @@ const ProfessionalContact = () => {
                     <span>Request Free Consultation</span>
                     <IconArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
                   </button>
-                  <p className="text-xs text-neutral-warm-500 dark:text-amoled-400 mt-3 text-center">
+                  <p className="text-xs text-neutral-warm-500 mt-3 text-center">
                     We&apos;ll respond within 24 hours to schedule your consultation
                   </p>
                 </div>
@@ -267,14 +267,14 @@ const ProfessionalContact = () => {
       </section>
 
       {/* Match with Top Legal Talent Section - LawTrades Style */}
-      <section className="py-16 lg:py-20 bg-white dark:bg-amoled-black">
+      <section className="py-16 lg:py-20 bg-white">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-neutral-warm-900 dark:text-amoled-50 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-neutral-warm-900 mb-6">
                 Match with expert immigration attorneys, fast
               </h2>
-              <p className="text-lg text-neutral-warm-600 dark:text-amoled-300 mb-8 leading-relaxed">
+              <p className="text-lg text-neutral-warm-600 mb-8 leading-relaxed">
                 Our platform instantly connects you with specialized immigration attorneys
                 who understand your specific case type. Licensed professionals with proven
                 track records in DACA, asylum, deportation defense, and status adjustment.
@@ -282,22 +282,22 @@ const ProfessionalContact = () => {
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
-                    <IconCheck className="w-4 h-4 text-green-600 dark:text-green-400" />
+                  <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                    <IconCheck className="w-4 h-4 text-green-600" />
                   </div>
-                  <span className="text-neutral-warm-700 dark:text-amoled-300">Licensed immigration specialists</span>
+                  <span className="text-neutral-warm-700">Licensed immigration specialists</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
-                    <IconCheck className="w-4 h-4 text-green-600 dark:text-green-400" />
+                  <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                    <IconCheck className="w-4 h-4 text-green-600" />
                   </div>
-                  <span className="text-neutral-warm-700 dark:text-amoled-300">Proven track record with successful cases</span>
+                  <span className="text-neutral-warm-700">Proven track record with successful cases</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
-                    <IconCheck className="w-4 h-4 text-green-600 dark:text-green-400" />
+                  <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                    <IconCheck className="w-4 h-4 text-green-600" />
                   </div>
-                  <span className="text-neutral-warm-700 dark:text-amoled-300">Experience with complex immigration cases</span>
+                  <span className="text-neutral-warm-700">Experience with complex immigration cases</span>
                 </div>
               </div>
             </div>
@@ -305,34 +305,34 @@ const ProfessionalContact = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="card p-6 text-center">
                 <div className="w-12 h-12  rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <IconGavel className="w-6 h-6 text-primary-700 dark:text-primary-400" />
+                  <IconGavel className="w-6 h-6 text-primary-700" />
                 </div>
-                <h3 className="font-semibold text-neutral-warm-900 dark:text-amoled-100 mb-2">Expert Attorneys</h3>
-                <p className="text-sm text-neutral-warm-600 dark:text-amoled-300">Specialized in immigration law</p>
+                <h3 className="font-semibold text-neutral-warm-900 mb-2">Expert Attorneys</h3>
+                <p className="text-sm text-neutral-warm-600">Specialized in immigration law</p>
               </div>
 
               <div className="card p-6 text-center">
                 <div className="w-12 h-12  rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <IconStar className="w-6 h-6 text-green-700 dark:text-green-400" />
+                  <IconStar className="w-6 h-6 text-green-700" />
                 </div>
-                <h3 className="font-semibold text-neutral-warm-900 dark:text-amoled-100 mb-2">Proven Results</h3>
-                <p className="text-sm text-neutral-warm-600 dark:text-amoled-300">Thousands of successful cases</p>
+                <h3 className="font-semibold text-neutral-warm-900 mb-2">Proven Results</h3>
+                <p className="text-sm text-neutral-warm-600">Thousands of successful cases</p>
               </div>
 
               <div className="card p-6 text-center">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <IconShield className="w-6 h-6 text-blue-700 dark:text-blue-400" />
+                  <IconShield className="w-6 h-6 text-blue-700" />
                 </div>
-                <h3 className="font-semibold text-neutral-warm-900 dark:text-amoled-100 mb-2">Confidential</h3>
-                <p className="text-sm text-neutral-warm-600 dark:text-amoled-300">Attorney-client privilege</p>
+                <h3 className="font-semibold text-neutral-warm-900 mb-2">Confidential</h3>
+                <p className="text-sm text-neutral-warm-600">Attorney-client privilege</p>
               </div>
 
               <div className="card p-6 text-center">
                 <div className="w-12 h-12  rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <IconClock className="w-6 h-6 text-orange-700 dark:text-orange-400" />
+                  <IconClock className="w-6 h-6 text-orange-700" />
                 </div>
-                <h3 className="font-semibold text-neutral-warm-900 dark:text-amoled-100 mb-2">Fast Response</h3>
-                <p className="text-sm text-neutral-warm-600 dark:text-amoled-300">24-hour consultation scheduling</p>
+                <h3 className="font-semibold text-neutral-warm-900 mb-2">Fast Response</h3>
+                <p className="text-sm text-neutral-warm-600">24-hour consultation scheduling</p>
               </div>
             </div>
           </div>
@@ -382,13 +382,13 @@ const ProfessionalContact = () => {
       </section>
 
       {/* Contact Information Section */}
-      <section className="py-16 lg:py-20 bg-neutral-warm-50 dark:bg-amoled-950">
+      <section className="py-16 lg:py-20 bg-neutral-warm-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-warm-900 dark:text-amoled-50 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-warm-900 mb-4">
               Get in touch today
             </h2>
-            <p className="text-lg text-neutral-warm-600 dark:text-amoled-300 max-w-3xl mx-auto">
+            <p className="text-lg text-neutral-warm-600 max-w-3xl mx-auto">
               Need immediate assistance or have questions about your immigration case?
               Our team is here to help through multiple channels.
             </p>
@@ -397,10 +397,10 @@ const ProfessionalContact = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="card p-8 text-center">
               <div className="w-16 h-16  rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <IconMapPin className="w-8 h-8 text-primary-600 dark:text-primary-400" />
+                <IconMapPin className="w-8 h-8 text-primary-600" />
               </div>
-              <h3 className="text-xl font-bold text-neutral-warm-900 dark:text-amoled-100 mb-4">Houston Office</h3>
-              <p className="text-neutral-warm-600 dark:text-amoled-300 mb-6 leading-relaxed">
+              <h3 className="text-xl font-bold text-neutral-warm-900 mb-4">Houston Office</h3>
+              <p className="text-neutral-warm-600 mb-6 leading-relaxed">
                 123 Main Street, Suite 400<br />
                 Houston, TX 77002<br />
                 Free parking available
@@ -409,10 +409,10 @@ const ProfessionalContact = () => {
 
             <div className="card p-8 text-center">
               <div className="w-16 h-16  rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <IconPhoneCall className="w-8 h-8 text-green-600 dark:text-green-400" />
+                <IconPhoneCall className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-neutral-warm-900 dark:text-amoled-100 mb-4">Phone Support</h3>
-              <p className="text-neutral-warm-600 dark:text-amoled-300 mb-6 leading-relaxed">
+              <h3 className="text-xl font-bold text-neutral-warm-900 mb-4">Phone Support</h3>
+              <p className="text-neutral-warm-600 mb-6 leading-relaxed">
                 Office: (713) 555-0123<br />
                 Emergency: (713) 555-0124<br />
                 Available 24/7 for urgent cases
@@ -421,22 +421,22 @@ const ProfessionalContact = () => {
 
             <div className="card p-8 text-center">
               <div className="w-16 h-16  rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <IconMail className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+                <IconMail className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold text-neutral-warm-900 dark:text-amoled-100 mb-4">Email Us</h3>
-              <p className="text-neutral-warm-600 dark:text-amoled-300 mb-6 leading-relaxed">
+              <h3 className="text-xl font-bold text-neutral-warm-900 mb-4">Email Us</h3>
+              <p className="text-neutral-warm-600 mb-6 leading-relaxed">
                 info@morgandauterrivellp.com<br />
                 We respond within 24 hours<br />
                 Secure communication
               </p>
             </div>
 
-            <div className="card p-8 text-center bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800">
+            <div className="card p-8 text-center bg-green-50 border-green-200">
               <div className="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <IconBrandWhatsapp className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-green-900 dark:text-green-300 mb-4">WhatsApp</h3>
-              <p className="text-green-700 dark:text-green-400 mb-6 leading-relaxed">
+              <h3 className="text-xl font-bold text-green-900 mb-4">WhatsApp</h3>
+              <p className="text-green-700 mb-6 leading-relaxed">
                 Instant legal guidance<br />
                 24/7 emergency support<br />
                 Fast and convenient

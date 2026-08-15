@@ -79,9 +79,9 @@ function BlogPostHeader({ post }: { post: any }) {
     <header className="mb-8">
       {/* Breadcrumb */}
       <nav className="mb-6" aria-label="Breadcrumb">
-        <ol className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
+        <ol className="flex items-center space-x-2 text-sm text-gray-500">
           <li>
-            <Link href="/" className="hover:text-gray-700 dark:hover:text-gray-200">
+            <Link href="/" className="hover:text-gray-700">
               Home
             </Link>
           </li>
@@ -89,14 +89,14 @@ function BlogPostHeader({ post }: { post: any }) {
             <span className="mx-2">/</span>
           </li>
           <li>
-            <Link href="/blog" className="hover:text-gray-700 dark:hover:text-gray-200">
+            <Link href="/blog" className="hover:text-gray-700">
               Blog
             </Link>
           </li>
           <li>
             <span className="mx-2">/</span>
           </li>
-          <li className="text-gray-900 dark:text-white" aria-current="page">
+          <li className="text-gray-900" aria-current="page">
             {post.title}
           </li>
         </ol>
@@ -104,21 +104,21 @@ function BlogPostHeader({ post }: { post: any }) {
 
       {/* Category badge */}
       <div className="mb-4">
-        <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200">
+        <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-100 text-primary-800">
           {post.category}
         </span>
       </div>
 
       {/* Title */}
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
         {post.title}
       </h1>
 
       {/* Meta information */}
-      <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 dark:text-gray-400 mb-6">
+      <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 mb-6">
         <div className="flex items-center gap-2">
           <span>By</span>
-          <span className="font-medium text-gray-900 dark:text-white">{post.author}</span>
+          <span className="font-medium text-gray-900">{post.author}</span>
         </div>
         <div className="flex items-center gap-2">
           <time dateTime={post.date}>{formatDate(post.date)}</time>
@@ -147,7 +147,7 @@ function BlogPostHeader({ post }: { post: any }) {
           {post.tags.map((tag) => (
             <span
               key={tag}
-              className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+              className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700"
             >
               #{tag}
             </span>
@@ -160,7 +160,7 @@ function BlogPostHeader({ post }: { post: any }) {
 
 function BlogPostContent({ content }: { content: string }) {
   return (
-    <div className="prose prose-lg dark:prose-invert max-w-none">
+    <div className="prose prose-lg max-w-none">
       <div
         dangerouslySetInnerHTML={{
           __html: markdownToHtml(content),
@@ -174,11 +174,11 @@ function RelatedPosts({ posts }: { posts: any[] }) {
   if (posts.length === 0) return null;
 
   return (
-    <section className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
-      <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Related Articles</h2>
+    <section className="mt-16 pt-8 border-t border-gray-200">
+      <h2 className="text-2xl font-bold text-gray-900 mb-8">Related Articles</h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((post) => (
-          <article key={post.slug} className="group relative bg-white dark:bg-slate-900 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-800">
+          <article key={post.slug} className="group relative bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-gray-100">
             {post.image && (
               <div className="relative h-48 overflow-hidden">
                 <Image
@@ -190,22 +190,22 @@ function RelatedPosts({ posts }: { posts: any[] }) {
               </div>
             )}
             <div className="p-6">
-              <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
                 <time dateTime={post.date}>{formatDate(post.date)}</time>
                 <span>•</span>
                 <span>{post.readingTime} min read</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
                 <Link href={`/blog/${post.slug}`}>
                   {post.title}
                 </Link>
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm line-clamp-2 mb-4">
+              <p className="text-gray-600 text-sm line-clamp-2 mb-4">
                 {post.excerpt}
               </p>
               <Link
                 href={`/blog/${post.slug}`}
-                className="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium text-sm transition-colors"
+                className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium text-sm transition-colors"
               >
                 Read more →
               </Link>
@@ -236,16 +236,16 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <BlogPostContent content={post.content} />
 
           {/* Author bio */}
-          <div className="mt-12 p-6 bg-gray-50 dark:bg-slate-800 rounded-xl">
+          <div className="mt-12 p-6 bg-gray-50 rounded-xl">
             <div className="flex items-start gap-4">
               <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
                 {post.author.charAt(0)}
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   About {post.author}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="text-gray-600">
                   Expert UK document consultant with over 10 years of experience helping clients navigate complex immigration and civil document requirements. Specializing in fast-track processing and ensuring 99% success rates.
                 </p>
               </div>

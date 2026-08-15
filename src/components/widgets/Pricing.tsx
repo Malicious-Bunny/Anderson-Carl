@@ -9,7 +9,7 @@ const Pricing = ({ header, prices, id, hasBackground = false }: PricingProps) =>
   <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="">
     {header && <Headline header={header} containerClass="max-w-5xl" titleClass="text-2xl sm:text-3xl" />}
     <div className="flex items-stretch justify-center">
-      <div className="grid grid-cols-3 gap-3 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+      <div className="grid grid-cols-3 gap-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
         {prices &&
           prices.map(
             ({ title, subtitle, price, period, items, callToAction, hasRibbon = false, ribbonTitle }, index) => (
@@ -33,14 +33,14 @@ const Pricing = ({ header, prices, id, hasBackground = false }: PricingProps) =>
                         </h3>
                       )}
                       {subtitle && (
-                        <p className="font-light sm:text-lg text-gray-600 dark:text-slate-400">{subtitle}</p>
+                        <p className="font-light sm:text-lg text-gray-600">{subtitle}</p>
                       )}
                       <div className="my-8">
                         <div className="flex items-center justify-center text-center mb-1">
                           <span className="text-5xl">$</span>
                           <span className="text-6xl font-extrabold">{price}</span>
                         </div>
-                        <span className="text-base leading-6 lowercase text-gray-600 dark:text-slate-400">
+                        <span className="text-base leading-6 lowercase text-gray-600">
                           {period}
                         </span>
                       </div>
@@ -53,7 +53,7 @@ const Pricing = ({ header, prices, id, hasBackground = false }: PricingProps) =>
                             defaultIcon={IconCheck}
                             containerClass="gap-2 md:gap-y-2"
                             panelClass="flex items-start"
-                            iconClass="w-4 h-4 mt-1.5 mr-3 rtl:mr-0 rtl:ml-3 flex items-center justify-center rounded-full border-2 border-primary-600 bg-primary-600 text-white dark:text-slate-200"
+                            iconClass="w-4 h-4 mt-1.5 mr-3 rtl:mr-0 rtl:ml-3 flex items-center justify-center rounded-full border-2 border-primary-600 bg-primary-600 text-white"
                           />
                         </div>
                       )}

@@ -34,10 +34,10 @@ export function ImageServiceCard({
       {/* Content takes up 1/4 of the component (96px) */}
       <div className="h-24 p-4 flex flex-col justify-between">
         <div>
-          <h3 className="text-sm font-bold text-blue-900 mb-1 line-clamp-2">{title}</h3>
+          <h3 className="text-sm font-bold text-primary-900 mb-1 line-clamp-2">{title}</h3>
           <p className="text-xs text-gray-700 line-clamp-2">{description}</p>
         </div>
-        <p className="text-sm font-semibold text-blue-900 mt-auto">{price}</p>
+        <p className="text-sm font-semibold text-primary-900 mt-auto">{price}</p>
       </div>
     </div>
   );

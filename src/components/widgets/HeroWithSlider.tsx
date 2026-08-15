@@ -4,28 +4,28 @@ import ImageAutoSlider from '../ui/image-auto-slider';
 
 const HeroWithSlider = ({ title, subtitle, tagline, callToAction, callToAction2 }: Omit<HeroProps, 'image'>) => {
   return (
-    <section id="heroOne" className="professional-section gradient-bg dark:bg-gradient-to-br dark:from-amoled-black dark:to-amoled-950">
+    <section id="heroOne" className="professional-section gradient-bg">
       <div className="container-custom">
         <div className="relative">
           {/* Hero Content */}
           <div className="text-center max-w-5xl mx-auto">
             {tagline && (
               <div className="mb-8">
-                <span className="inline-flex items-center px-6 py-3 rounded-full text-sm font-semibold bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300 border border-primary-200 dark:border-primary-800">
+                <span className="inline-flex items-center px-6 py-3 rounded-full text-sm font-semibold bg-primary-50 text-primary-800 border border-primary-200">
                   {tagline}
                 </span>
               </div>
             )}
 
             {title && (
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-neutral-warm-900 dark:text-amoled-50 mb-10 leading-tight">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-neutral-warm-900 mb-10 leading-tight">
                 {title}
               </h1>
             )}
 
             <div className="max-w-4xl mx-auto mb-12">
               {subtitle && (
-                <p className="text-xl md:text-2xl leading-relaxed text-neutral-warm-600 dark:text-amoled-300 font-normal">
+                <p className="text-xl md:text-2xl leading-relaxed text-neutral-warm-600 font-normal">
                   {subtitle}
                 </p>
               )}

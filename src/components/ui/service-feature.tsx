@@ -28,10 +28,10 @@ function ServiceFeature({ service, imageOnRight = false }: ServiceFeatureProps) 
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-4">
-                <span className="text-xl md:text-2xl font-bold text-blue-900">{service.price}</span>
+                <span className="text-xl md:text-2xl font-bold text-primary-900">{service.price}</span>
                 <Link
                   href={service.link}
-                  className="bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors text-center"
+                  className="bg-primary-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-800 transition-colors text-center"
                 >
                   Learn More
                 </Link>
