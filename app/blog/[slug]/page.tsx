@@ -13,6 +13,7 @@ import {
   renderMarkdown,
   type Post,
 } from '~/lib/posts';
+import { absoluteImage } from '~/lib/images';
 
 // Posts are edited through the CMS, so pages must reflect the database on every
 // request rather than a build-time snapshot.
@@ -33,9 +34,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   }
 
   const url = `${SITE.author.website}/blog/${post.slug}`;
-  const imageUrl = post.image
-    ? `${SITE.author.website}${post.image}`
-    : `${SITE.author.website}/passport-1.jpg`;
+  // Post images may be absolute (stock) or site-relative (uploads).
+  const imageUrl = absoluteImage(post.image, SITE.author.website);
 
   return {
     title: post.title,
@@ -214,7 +214,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             '@type': 'BlogPosting',
             headline: post.title,
             description: post.description,
-            image: post.image ? `${SITE.author.website}${post.image}` : undefined,
+            image: absoluteImage(post.image, SITE.author.website),
             url: `${SITE.author.website}/blog/${post.slug}`,
             datePublished: post.date,
             dateModified: post.date,

@@ -37,11 +37,11 @@ export default function PTEIELTSNoExamService() {
       {/* Auto Image Slider */}
       <ScrollGallery
       images={[
-        '/pte-1.jpg',
-        '/pte-2.jpg',
-        '/headshot.jpg',
-        '/passport-1.jpg',
-        '/passport-2.jpg'
+        'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1200&q=80&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1200&q=80&auto=format&fit=crop'
       ]}
       />
 

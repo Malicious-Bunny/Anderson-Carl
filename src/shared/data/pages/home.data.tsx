@@ -197,7 +197,7 @@ export const servicesHome: ServicesProps = {
       title: 'Driver Licence Services',
       description: 'Professional help with driver licence applications, renewals, and replacements for all UK licence categories. All services completed without taking any tests - certificate handed to you after processing.',
       image: {
-        src: '/driverlicense-1.jpg',
+        src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1200&q=80&auto=format&fit=crop',
         alt: 'UK Driver Licence Services',
       },
       icon: IconCertificate,
@@ -222,7 +222,7 @@ export const servicesHome: ServicesProps = {
       title: 'Passport Services',
       description: 'Complete assistance with UK passport applications, renewals, and replacements with expert guidance through every step. Processing time: 4 days.',
       image: {
-        src: '/passport-2.jpg',
+        src: 'https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1200&q=80&auto=format&fit=crop',
         alt: 'UK Passport Services',
       },
       icon: IconFileText,
@@ -246,7 +246,7 @@ export const servicesHome: ServicesProps = {
       title: 'Visa Renewal',
       description: 'Expert assistance with residence permits, visa renewals, and other immigration-related documentation. Processing time varies by service.',
       image: {
-        src: '/passport-3.jpg',
+        src: 'https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1200&q=80&auto=format&fit=crop',
         alt: 'Immigration Documents',
       },
       icon: IconUsers,
@@ -270,7 +270,7 @@ export const servicesHome: ServicesProps = {
       title: 'Civil Documents',
       description: 'Official UK civil documents including birth certificates, marriage certificates, death certificates and other vital records. Processing time: 1-2 days.',
       image: {
-        src: '/passport-2.jpg',
+        src: 'https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1200&q=80&auto=format&fit=crop',
         alt: 'UK Civil Documents',
       },
       icon: IconCertificate,
@@ -294,7 +294,7 @@ export const servicesHome: ServicesProps = {
       title: 'Language Certificates',
       description: 'Professional support with IELTS, PTE, and other English language certification processes. No test required - certificate handed to you after 3 days processing.',
       image: {
-        src: '/pte-2.jpg',
+        src: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80&auto=format&fit=crop',
         alt: 'Language Certificates',
       },
       icon: IconAward,
@@ -318,7 +318,7 @@ export const servicesHome: ServicesProps = {
       title: 'UK Death Certificate',
       description: 'Expedited official UK death certificate applications for urgent legal and probate requirements. Processing time: 1-2 working days.',
       image: {
-        src: '/driverlicense-4.jpg',
+        src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1200&q=80&auto=format&fit=crop',
         alt: 'UK Death Certificate',
       },
       icon: IconFileText,

@@ -207,7 +207,7 @@ export default function BlogAdminPage() {
                 setImageOk(null);
               }}
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-forest-500 text-ink-900"
-              placeholder="/passport-1.jpg"
+              placeholder="/uploads/my-image.jpg or an https:// URL"
             />
 
             {/* A typo here silently ships a broken image, so show it immediately. */}

@@ -6,8 +6,9 @@ price: "£620"
 processingTime: "3 days"
 order: 9
 images:
-  - "/pte-2.jpg"
-  - "/pte-1.jpg"
+  - "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80&auto=format&fit=crop"
+  - "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=1200&q=80&auto=format&fit=crop"
+  - "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200&q=80&auto=format&fit=crop"
 ---
 ## Test Registration
 

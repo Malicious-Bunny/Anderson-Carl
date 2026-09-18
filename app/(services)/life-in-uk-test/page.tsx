@@ -37,11 +37,11 @@ export default function LifeInUKTestService() {
       {/* Auto Image Slider */}
       <ScrollGallery
       images={[
-        '/headshot.jpg',
-        '/passport-1.jpg',
-        '/passport-2.jpg',
-        '/passport-3.jpg',
-        '/driverlicense-1.jpg'
+        'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1200&q=80&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1200&q=80&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1200&q=80&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1200&q=80&auto=format&fit=crop'
       ]}
       />
 

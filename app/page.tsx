@@ -13,6 +13,7 @@ import {
 import { SITE } from '~/config.js';
 import { getAllServices } from '~/lib/serviceContent';
 import { getContactInfo } from '~/lib/contact';
+import { IMAGES } from '~/lib/images';
 import BookButton from '~/components/BookButton';
 import ServiceGallery from '~/components/ServiceGallery';
 
@@ -127,7 +128,7 @@ export default async function HomePage() {
           </div>
           <div className="relative aspect-[4/5] w-full overflow-hidden md:aspect-auto md:h-[32rem]">
             <Image
-              src="/passport-1.jpg"
+              src={IMAGES.hero}
               alt="UK document consultation"
               fill
               priority
@@ -216,8 +217,9 @@ export default async function HomePage() {
       {/* Approach — dark band */}
       <section className="relative border-b border-ink-200 py-20 md:py-24">
         <div className="absolute inset-0">
-          <Image src="/passport-3.jpg" alt="" fill sizes="100vw" className="object-cover" />
-          <div className="absolute inset-0 bg-ink-900/88" />
+          <Image src={IMAGES.approach} alt="" fill sizes="100vw" className="object-cover" />
+          {/* Explicit stacking so the scrim always paints over the photo. */}
+          <div className="absolute inset-0 z-10 bg-ink-900/90" />
         </div>
         <div className="container-page relative">
           <p className="eyebrow mb-3 text-clay-300">Our approach</p>

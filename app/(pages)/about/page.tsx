@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { IconCircleCheck } from '@tabler/icons-react';
 
 import { getContactInfo } from '~/lib/contact';
+import { IMAGES } from '~/lib/images';
 import BookButton from '~/components/BookButton';
 
 export const metadata: Metadata = {
@@ -91,8 +92,8 @@ export default async function AboutPage() {
           </div>
           <div className="relative aspect-[4/5] w-full overflow-hidden md:aspect-auto md:h-[30rem]">
             <Image
-              src="/headshot.jpg"
-              alt="Anderson Carl"
+              src={IMAGES.about}
+              alt="Anderson Carl consultation"
               fill
               priority
               sizes="(min-width: 768px) 45vw, 100vw"

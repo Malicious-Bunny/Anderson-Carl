@@ -25,7 +25,7 @@ export const mainServices: MainService[] = [
     description: 'Professional help with driver licence applications, renewals, and replacements for all UK licence categories. All services completed without taking any tests - certificate handed to you after processing.',
     price: '£65',
     badge: 'Fast Track',
-    image: '/license-service.jpg',
+    image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1200&q=80&auto=format&fit=crop',
     link: '/services/driver-licence',
     subServices: [
       {
