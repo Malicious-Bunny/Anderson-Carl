@@ -1,19 +1,19 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { checkSession, logout } from '~/lib/adminSession';
 
 export default function AdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [checking, setChecking] = useState(true);
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const router = useRouter();
 
   useEffect(() => {
-    const auth = sessionStorage.getItem('admin_auth');
-    if (auth === 'true') {
-      setIsAuthenticated(true);
-    }
+    checkSession().then((valid) => {
+      setIsAuthenticated(valid);
+      setChecking(false);
+    });
   }, []);
 
   const handleLogin = async (e: React.FormEvent) => {
@@ -27,18 +27,27 @@ export default function AdminPage() {
     });
 
     if (res.ok) {
-      sessionStorage.setItem('admin_auth', 'true');
       setIsAuthenticated(true);
+      setPassword('');
     } else {
-      setError('Invalid password');
+      const data = await res.json().catch(() => ({}));
+      setError(data.error || 'Invalid password');
     }
   };
 
-  const handleLogout = () => {
-    sessionStorage.removeItem('admin_auth');
+  const handleLogout = async () => {
+    await logout();
     setIsAuthenticated(false);
     setPassword('');
   };
+
+  if (checking) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="animate-spin rounded-full h-10 w-10 border-4 border-gray-300 border-t-blue-900" />
+      </div>
+    );
+  }
 
   if (!isAuthenticated) {
     return (

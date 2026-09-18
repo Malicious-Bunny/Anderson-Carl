@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { checkSession } from '~/lib/adminSession';
 
 interface BlogPost {
   id: string;
@@ -26,12 +27,13 @@ export default function BlogAdminPage() {
   const router = useRouter();
 
   useEffect(() => {
-    const auth = sessionStorage.getItem('admin_auth');
-    if (auth !== 'true') {
-      router.push('/admin');
-      return;
-    }
-    fetchPosts();
+    checkSession().then((valid) => {
+      if (!valid) {
+        router.push('/admin');
+        return;
+      }
+      fetchPosts();
+    });
   }, [router]);
 
   const fetchPosts = async () => {

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { checkSession } from '~/lib/adminSession';
 
 export default function ImagesAdminPage() {
   const [images, setImages] = useState<string[]>([]);
@@ -9,12 +10,13 @@ export default function ImagesAdminPage() {
   const router = useRouter();
 
   useEffect(() => {
-    const auth = sessionStorage.getItem('admin_auth');
-    if (auth !== 'true') {
-      router.push('/admin');
-      return;
-    }
-    fetchImages();
+    checkSession().then((valid) => {
+      if (!valid) {
+        router.push('/admin');
+        return;
+      }
+      fetchImages();
+    });
   }, [router]);
 
   const fetchImages = async () => {

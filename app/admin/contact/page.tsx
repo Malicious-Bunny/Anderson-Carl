@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { checkSession } from '~/lib/adminSession';
 
 export default function ContactAdminPage() {
   const [email, setEmail] = useState('');
@@ -13,12 +14,13 @@ export default function ContactAdminPage() {
   const router = useRouter();
 
   useEffect(() => {
-    const auth = sessionStorage.getItem('admin_auth');
-    if (auth !== 'true') {
-      router.push('/admin');
-      return;
-    }
-    fetchContactInfo();
+    checkSession().then((valid) => {
+      if (!valid) {
+        router.push('/admin');
+        return;
+      }
+      fetchContactInfo();
+    });
   }, [router]);
 
   const fetchContactInfo = async () => {

@@ -1,13 +1,21 @@
 import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || '';
 
-if (!supabaseUrl || !supabaseAnonKey) {
+if (!supabaseUrl || !supabaseKey) {
   console.warn('Supabase credentials not found. Please add them to .env.local');
 }
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// Next.js patches the global fetch and caches GET responses in its Data Cache.
+// That would serve stale content after a CMS edit — the whole point of this
+// setup is that edits appear immediately — so opt every Supabase request out.
+export const supabase = createClient(supabaseUrl, supabaseKey, {
+  global: {
+    fetch: (input: RequestInfo | URL, init?: RequestInit) =>
+      fetch(input, { ...init, cache: 'no-store' }),
+  },
+});
 
 // Types for our database tables
 export interface BlogPost {

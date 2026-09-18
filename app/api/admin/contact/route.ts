@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { supabase } from '~/lib/supabase';
+import { isAuthenticated, unauthorized } from '~/lib/auth';
 
 // GET contact info
-export async function GET() {
+export async function GET(request: NextRequest) {
+  if (!isAuthenticated(request)) return unauthorized();
+
   try {
     const { data, error } = await supabase
       .from('contact_info')
@@ -20,6 +23,8 @@ export async function GET() {
 
 // PUT update contact info
 export async function PUT(request: NextRequest) {
+  if (!isAuthenticated(request)) return unauthorized();
+
   try {
     const body = await request.json();
     const { email, phone, whatsapp, office_location, availability } = body;

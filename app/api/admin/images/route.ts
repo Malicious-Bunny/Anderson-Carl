@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import { writeFile, unlink } from 'fs/promises';
+import { isAuthenticated, unauthorized } from '~/lib/auth';
 
 const UPLOAD_DIR = path.join(process.cwd(), 'public/images/uploads');
 
@@ -11,7 +12,9 @@ if (!fs.existsSync(UPLOAD_DIR)) {
 }
 
 // GET all images
-export async function GET() {
+export async function GET(request: NextRequest) {
+  if (!isAuthenticated(request)) return unauthorized();
+
   try {
     const files = fs.readdirSync(UPLOAD_DIR);
     const images = files
@@ -26,6 +29,8 @@ export async function GET() {
 
 // POST upload images
 export async function POST(request: NextRequest) {
+  if (!isAuthenticated(request)) return unauthorized();
+
   try {
     const formData = await request.formData();
     const files = formData.getAll('files') as File[];
@@ -38,7 +43,7 @@ export async function POST(request: NextRequest) {
 
     for (const file of files) {
       const bytes = await file.arrayBuffer();
-      const buffer = Buffer.from(bytes);
+      const buffer = new Uint8Array(bytes);
 
       // Generate unique filename
       const ext = path.extname(file.name);
@@ -57,12 +62,19 @@ export async function POST(request: NextRequest) {
 
 // DELETE image
 export async function DELETE(request: NextRequest) {
+  if (!isAuthenticated(request)) return unauthorized();
+
   try {
     const { imagePath } = await request.json();
 
     // Extract filename from path like "/images/uploads/filename.jpg"
-    const filename = imagePath.split('/').pop();
+    const filename = String(imagePath).split('/').pop() || '';
     const filepath = path.join(UPLOAD_DIR, filename);
+
+    // Refuse anything resolving outside the upload directory.
+    if (path.dirname(path.resolve(filepath)) !== path.resolve(UPLOAD_DIR)) {
+      return NextResponse.json({ error: 'Invalid image path' }, { status: 400 });
+    }
 
     if (!fs.existsSync(filepath)) {
       return NextResponse.json({ error: 'Image not found' }, { status: 404 });

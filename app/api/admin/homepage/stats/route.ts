@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { supabase } from '~/lib/supabase';
+import { isAuthenticated, unauthorized } from '~/lib/auth';
 
 // GET all stats
-export async function GET() {
+export async function GET(request: NextRequest) {
+  if (!isAuthenticated(request)) return unauthorized();
+
   try {
     const { data: stats, error } = await supabase
       .from('stats')
@@ -21,6 +24,8 @@ export async function GET() {
 
 // PUT update stat
 export async function PUT(request: NextRequest) {
+  if (!isAuthenticated(request)) return unauthorized();
+
   try {
     const body = await request.json();
     const { id, title, description, display_order } = body;
@@ -47,6 +52,8 @@ export async function PUT(request: NextRequest) {
 
 // POST create new stat
 export async function POST(request: NextRequest) {
+  if (!isAuthenticated(request)) return unauthorized();
+
   try {
     const body = await request.json();
     const { title, description, display_order } = body;
@@ -73,6 +80,8 @@ export async function POST(request: NextRequest) {
 
 // DELETE stat
 export async function DELETE(request: NextRequest) {
+  if (!isAuthenticated(request)) return unauthorized();
+
   try {
     const { id } = await request.json();
 
