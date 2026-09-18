@@ -1,27 +1,36 @@
 import type { Metadata } from 'next';
-
 import fs from 'fs';
 import path from 'path';
-import md from 'markdown-it';
+import MarkdownIt from 'markdown-it';
+
+const TITLE = 'Terms & Conditions';
 
 export const metadata: Metadata = {
-  title: 'Terms and conditions',
+  title: TITLE,
 };
 
-const Page = () => {
+export default function Page() {
   const filePath = path.join(process.cwd(), 'src/content/terms/terms.md');
-  const fileContent = fs.readFileSync(filePath, 'utf8');
+  const source = fs.readFileSync(filePath, 'utf8');
+  const html = new MarkdownIt({ html: true, linkify: true }).render(source);
 
   return (
-    <div
-      className="prose-md prose-headings:font-heading prose-headings:leading-tighter container prose prose-lg mx-auto mt-8 max-w-3xl px-6 prose-headings:font-bold prose-headings:tracking-tighter prose-a:text-primary-600 prose-img:rounded-md prose-img:shadow-lg sm:px-6 lg:prose-xl"
-      dangerouslySetInnerHTML={{
-        __html: md({
-          html: true,
-        }).render(fileContent),
-      }}
-    />
-  );
-};
+    <>
+      <section className="border-b border-ink-200 pt-32 pb-12 md:pt-40">
+        <div className="container-page">
+          <p className="eyebrow mb-6">Legal</p>
+          <h1>{TITLE}</h1>
+        </div>
+      </section>
 
-export default Page;
+      <section className="py-14 md:py-16">
+        <div className="container-page">
+          <div
+            className="prose prose-lg max-w-prose prose-headings:font-display prose-headings:font-medium prose-headings:text-ink-800 prose-p:text-ink-500 prose-li:text-ink-500 prose-a:text-forest-700 prose-strong:text-ink-700"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        </div>
+      </section>
+    </>
+  );
+}

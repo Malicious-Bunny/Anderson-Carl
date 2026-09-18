@@ -1,13 +1,28 @@
 import { Metadata } from 'next';
+import { Archivo, Inter } from 'next/font/google';
 
 import { SITE } from '~/config.js';
 
-import Providers from '~/components/atoms/Providers';
-import Header from '~/components/widgets/Header';
-import Footer from '~/components/widgets/Footer';
+import SiteHeader from '~/components/SiteHeader';
+import SiteFooter from '~/components/SiteFooter';
 import WhatsAppFloat from '~/components/atoms/WhatsAppFloat';
+import { getContactInfo } from '~/lib/contact';
 
 import '~/assets/styles/base.css';
+
+const archivo = Archivo({
+  subsets: ['latin'],
+  variable: '--font-display',
+  weight: ['500', '600', '700'],
+  display: 'swap',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-body',
+  weight: ['400', '500', '600'],
+  display: 'swap',
+});
 
 export interface LayoutProps {
   children: React.ReactNode;
@@ -21,26 +36,20 @@ export const metadata: Metadata = {
   description: SITE.description,
 };
 
-export default function RootLayout({ children }: LayoutProps) {
+export default async function RootLayout({ children }: LayoutProps) {
+  const contact = await getContactInfo();
+
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`scroll-smooth ${archivo.variable} ${inter.variable}`}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
       </head>
-      <body className="font-sans antialiased text-neutral-warm-800 bg-neutral-warm-50">
-        <Providers>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <WhatsAppFloat />
-        </Providers>
+      <body className="bg-paper font-sans text-ink-700 antialiased">
+        <SiteHeader whatsapp={contact.whatsapp} />
+        <main>{children}</main>
+        <SiteFooter />
+        <WhatsAppFloat />
       </body>
     </html>
   );

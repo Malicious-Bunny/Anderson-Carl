@@ -76,8 +76,8 @@ export default function ImagesAdminPage() {
   return (
     <div>
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold text-gray-900">Image Management</h2>
-        <label className="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition cursor-pointer">
+        <h2 className="text-2xl font-bold text-ink-900">Image Management</h2>
+        <label className="px-4 py-2 bg-ink-800 text-paper rounded-lg hover:bg-ink-700 transition cursor-pointer">
           + Upload Images
           <input
             type="file"
@@ -89,9 +89,9 @@ export default function ImagesAdminPage() {
         </label>
       </div>
 
-      <div className="bg-white rounded-lg shadow-lg p-6">
+      <div className="bg-paper rounded-lg shadow-lg p-6">
         {images.length === 0 ? (
-          <div className="text-center py-12 text-gray-500">
+          <div className="text-center py-12 text-ink-400">
             No images uploaded yet. Upload your first one!
           </div>
         ) : (
@@ -106,7 +106,7 @@ export default function ImagesAdminPage() {
                 <div className="p-3 space-y-2">
                   <button
                     onClick={() => copyToClipboard(image)}
-                    className="w-full px-3 py-1 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded text-sm"
+                    className="w-full px-3 py-1 bg-ink-100 hover:bg-ink-200 text-ink-600 rounded text-sm"
                   >
                     Copy Path
                   </button>

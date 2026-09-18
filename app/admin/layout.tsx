@@ -1,25 +1,33 @@
 import { ReactNode } from 'react';
+import Link from 'next/link';
 
 export default function AdminLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <nav className="bg-blue-900 text-white shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16 items-center">
-            <h1 className="text-2xl font-bold">Anderson Carl Admin</h1>
-            <a
-              href="/"
-              target="_blank"
-              className="px-4 py-2 bg-blue-700 hover:bg-blue-600 rounded-lg transition"
+    <div className="min-h-screen pt-20">
+      <div className="border-b border-ink-200 bg-ink-800">
+        <div className="container-page flex h-14 items-center justify-between">
+          <div className="flex items-center gap-4">
+            <Link
+              href="/admin"
+              className="font-display text-sm font-semibold tracking-tight text-paper"
             >
-              View Site
-            </a>
+              Content Manager
+            </Link>
+            <span className="text-xs font-semibold uppercase tracking-[0.16em] text-clay-300">
+              Admin
+            </span>
           </div>
+          <Link
+            href="/"
+            target="_blank"
+            className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-300 transition-colors duration-150 hover:text-paper"
+          >
+            View site ↗
+          </Link>
         </div>
-      </nav>
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {children}
-      </main>
+      </div>
+
+      <main className="container-page py-12">{children}</main>
     </div>
   );
 }
