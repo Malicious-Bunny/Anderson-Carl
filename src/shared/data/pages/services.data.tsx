@@ -11,7 +11,7 @@ import {
   IconAward,
   IconClock,
   IconClipboardCheck,
-  IconBrandWhatsapp,
+  IconMessageCircle,
 } from '@tabler/icons-react';
 
 import {
@@ -31,7 +31,7 @@ export const heroServices: HeroProps = {
   callToAction: {
     text: 'Get Free Consultation',
     href: '/contact',
-    icon: IconBrandWhatsapp,
+    icon: IconMessageCircle,
   },
   callToAction2: {
     text: 'View All Services',
@@ -214,7 +214,7 @@ export const callToActionServices: CallToActionProps = {
   callToAction: {
     text: 'Get Free Consultation',
     href: '/contact',
-    icon: IconBrandWhatsapp,
+    icon: IconMessageCircle,
   },
   items: [
     {

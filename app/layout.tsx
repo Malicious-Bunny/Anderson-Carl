@@ -5,7 +5,7 @@ import { SITE } from '~/config.js';
 
 import SiteHeader from '~/components/SiteHeader';
 import SiteFooter from '~/components/SiteFooter';
-import WhatsAppFloat from '~/components/atoms/WhatsAppFloat';
+import ChatFloat from '~/components/atoms/ChatFloat';
 import { getContactInfo } from '~/lib/contact';
 
 import '~/assets/styles/base.css';
@@ -49,7 +49,7 @@ export default async function RootLayout({ children }: LayoutProps) {
         <SiteHeader whatsapp={contact.whatsapp} />
         <main>{children}</main>
         <SiteFooter />
-        <WhatsAppFloat />
+        <ChatFloat />
       </body>
     </html>
   );

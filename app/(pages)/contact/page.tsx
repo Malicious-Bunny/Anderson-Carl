@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { IconBrandWhatsapp, IconMail, IconMapPin, IconClock } from '@tabler/icons-react';
+import { CHAT_URL } from '~/site';
+import { IconMessageCircle, IconMail, IconMapPin, IconClock } from '@tabler/icons-react';
 
 import { getContactInfo } from '~/lib/contact';
 import BookButton from '~/components/BookButton';
@@ -16,10 +17,10 @@ export default async function ContactPage() {
 
   const channels = [
     {
-      icon: IconBrandWhatsapp,
-      label: 'WhatsApp',
-      value: contact.phone,
-      href: `https://wa.me/${contact.whatsapp}`,
+      icon: IconMessageCircle,
+      label: 'Live chat',
+      value: 'chat.andersoncarlconsultancy.uk',
+      href: CHAT_URL,
       note: 'Fastest way to reach us',
     },
     {

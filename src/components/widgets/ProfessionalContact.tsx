@@ -442,7 +442,7 @@ const ProfessionalContact = () => {
                 Fast and convenient
               </p>
               <a
-                href="https://wa.me/17135550123"
+                href="https://chat.andersoncarlconsultancy.uk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-lawtrades btn-lawtrades-primary bg-green-600 hover:bg-green-700"

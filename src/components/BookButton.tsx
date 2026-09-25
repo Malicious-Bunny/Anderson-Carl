@@ -1,8 +1,9 @@
-import { IconBrandWhatsapp } from '@tabler/icons-react';
+import { IconMessageCircle } from '@tabler/icons-react';
 
-import { whatsappLink } from '~/site';
+import { CHAT_URL } from '~/site';
 
 interface BookButtonProps {
+  /** @deprecated Retained so existing `whatsapp={contact.whatsapp}` call sites keep compiling. */
   whatsapp?: string;
   className?: string;
   children?: React.ReactNode;
@@ -11,21 +12,14 @@ interface BookButtonProps {
 }
 
 export default function BookButton({
-  whatsapp,
   className = 'btn btn-primary',
-  children = 'Message us on WhatsApp',
+  children = 'Chat with us',
   showIcon = true,
   onClick,
 }: BookButtonProps) {
   return (
-    <a
-      href={whatsappLink(whatsapp)}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={className}
-      onClick={onClick}
-    >
-      {showIcon && <IconBrandWhatsapp size={18} stroke={2} />}
+    <a href={CHAT_URL} className={className} onClick={onClick}>
+      {showIcon && <IconMessageCircle size={18} stroke={2} />}
       {children}
     </a>
   );

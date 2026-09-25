@@ -1,4 +1,6 @@
-export const WA_NUMBER = '447529418057';
-export const WA_MESSAGE = 'Hello%20Anderson%20Carl%2C%20I%20would%20like%20to%20enquire%20about%20your%20UK%20document%20services.';
-export const WA_URL = `https://wa.me/${WA_NUMBER}?text=${WA_MESSAGE}`;
+// The client chat at chat.andersoncarlconsultancy.uk replaced WhatsApp as the
+// enquiry channel. Threads are private, resume from the same browser, and land
+// in the owner inbox — see ../../andersonchat.
+export const CHAT_URL = 'https://chat.andersoncarlconsultancy.uk';
+
 export const EMAIL = 'support@andersoncarlconsultancy.uk';

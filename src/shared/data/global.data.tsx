@@ -2,7 +2,7 @@ import {
   IconBrandFacebook,
   IconBrandInstagram,
   IconBrandLinkedin,
-  IconBrandWhatsapp,
+  IconMessageCircle,
   IconChevronDown,
   IconPhone,
   IconMail,
@@ -19,8 +19,8 @@ export const announcementData: AnnouncementProps = {
     href: 'mailto:support@andersoncarlconsultancy.uk',
   },
   callToAction2: {
-    text: 'WhatsApp: +44 7529 418057',
-    href: 'https://wa.me/447529418057',
+    text: 'Chat with us',
+    href: 'https://chat.andersoncarlconsultancy.uk',
   },
 };
 
@@ -100,10 +100,10 @@ export const headerData: HeaderProps = {
   ],
   actions: [
     {
-      text: 'WhatsApp Us',
-      href: 'https://wa.me/447529418057?text=Hello%20Anderson%20Carl%2C%20I%20would%20like%20to%20enquire%20about%20your%20UK%20document%20services.',
+      text: 'Chat With Us',
+      href: 'https://chat.andersoncarlconsultancy.uk',
       targetBlank: true,
-      icon: IconBrandWhatsapp,
+      icon: IconMessageCircle,
     },
   ],
   isSticky: true,
@@ -193,7 +193,7 @@ export const footerData: FooterProps = {
     { label: 'Privacy Policy', href: '/privacy' },
   ],
   socials: [
-    { label: 'WhatsApp', icon: IconBrandWhatsapp, href: 'https://wa.me/447529418057?text=Hello%20Anderson%20Carl%2C%20I%20would%20like%20to%20enquire%20about%20your%20UK%20document%20services.' },
+    { label: 'Live chat', icon: IconMessageCircle, href: 'https://chat.andersoncarlconsultancy.uk' },
   ],
   footNote: '© 2025 Anderson Carl Life in the UK Documents. All rights reserved. | Professional documentation services for UK residents.',
   theme: 'dark',
@@ -216,10 +216,10 @@ export const contactData = {
       href: 'mailto:support@andersoncarlconsultancy.uk',
     },
     {
-      title: 'WhatsApp',
-      description: '+44 7529 418057',
-      icon: IconBrandWhatsapp,
-      href: 'https://wa.me/447529418057',
+      title: 'Live chat',
+      description: 'chat.andersoncarlconsultancy.uk',
+      icon: IconMessageCircle,
+      href: 'https://chat.andersoncarlconsultancy.uk',
     },
     {
       title: 'Office Location',

@@ -13,7 +13,7 @@ import {
   IconBook,
   IconBrandLinkedin,
   IconBrandTwitter,
-  IconBrandWhatsapp,
+  IconMessageCircle,
   IconBulb,
   IconCirclesRelation,
   IconClock,
@@ -49,7 +49,7 @@ export const hero2About: HeroProps = {
   callToAction: {
     text: 'Get Free Consultation',
     href: '/contact',
-    icon: IconBrandWhatsapp,
+    icon: IconMessageCircle,
   },
   callToAction2: {
     text: 'Email Anderson',
@@ -162,8 +162,8 @@ export const teamAbout: TeamProps = {
       ],
       social: [
         {
-          icon: IconBrandWhatsapp,
-          href: 'https://wa.me/447529418057',
+          icon: IconMessageCircle,
+          href: 'https://chat.andersoncarlconsultancy.uk',
         },
         {
           icon: IconMail,
@@ -216,7 +216,7 @@ export const stepsAbout: StepsProps = {
   callToAction: {
     text: 'Start Your Application',
     href: '/contact',
-    icon: IconBrandWhatsapp,
+    icon: IconMessageCircle,
   },
 };
 
@@ -239,10 +239,10 @@ export const contactAbout: ContactProps = {
       href: 'mailto:support@andersoncarlconsultancy.uk',
     },
     {
-      title: 'WhatsApp',
-      description: '+44 7529 418057',
-      icon: IconBrandWhatsapp,
-      href: 'https://wa.me/447529418057',
+      title: 'Live chat',
+      description: 'chat.andersoncarlconsultancy.uk',
+      icon: IconMessageCircle,
+      href: 'https://chat.andersoncarlconsultancy.uk',
     },
     {
       title: 'Office Location',

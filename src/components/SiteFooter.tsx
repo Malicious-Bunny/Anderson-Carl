@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { NAV, LEGAL_NAV } from '~/site';
+import { NAV, LEGAL_NAV, CHAT_URL } from '~/site';
 import { getAllServices } from '~/lib/serviceContent';
 import { getContactInfo } from '~/lib/contact';
 
@@ -66,13 +66,8 @@ export default async function SiteFooter() {
               </a>
             </li>
             <li>
-              <a
-                href={`https://wa.me/${contact.whatsapp}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-paper"
-              >
-                {contact.phone} (WhatsApp)
+              <a href={CHAT_URL} className="hover:text-paper">
+                Chat with us
               </a>
             </li>
             <li className="text-ink-300">{contact.availability}</li>

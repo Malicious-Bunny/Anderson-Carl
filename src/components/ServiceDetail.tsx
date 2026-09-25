@@ -78,12 +78,12 @@ export default async function ServiceDetail({ slug }: { slug: string }) {
         <div className="mt-16 border border-ink-200 bg-ink-50 p-8 md:p-10">
           <h2 className="text-2xl">Ready to get started?</h2>
           <p className="mt-3 max-w-prose">
-            Message us on WhatsApp and we&apos;ll talk through your situation, what documents
+            Start a chat and we&apos;ll talk through your situation, what documents
             you&apos;ll need, and how long it&apos;s realistically going to take.
           </p>
           <div className="mt-7 flex flex-wrap gap-4">
             <BookButton whatsapp={contact.whatsapp} className="btn btn-primary">
-              WhatsApp Us
+              Chat With Us
             </BookButton>
             <Link href="/contact" className="btn btn-outline">
               Other ways to reach us

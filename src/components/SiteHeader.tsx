@@ -47,7 +47,7 @@ export default function SiteHeader({ whatsapp }: { whatsapp: string }) {
           whatsapp={whatsapp}
           className="btn btn-primary hidden md:inline-flex"
         >
-          WhatsApp Us
+          Chat With Us
         </BookButton>
 
         <button
@@ -79,7 +79,7 @@ export default function SiteHeader({ whatsapp }: { whatsapp: string }) {
               className="btn btn-primary mt-4 w-full"
               onClick={() => setOpen(false)}
             >
-              WhatsApp Us
+              Chat With Us
             </BookButton>
           </nav>
         </div>

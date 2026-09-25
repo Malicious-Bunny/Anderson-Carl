@@ -1,4 +1,4 @@
-import { IconClock, IconHeadset, IconHelp, IconMapPin, IconMessages, IconPhoneCall, IconBrandWhatsapp, IconMail } from '@tabler/icons-react';
+import { IconClock, IconHeadset, IconHelp, IconMapPin, IconMessages, IconPhoneCall, IconMessageCircle, IconMail } from '@tabler/icons-react';
 import { ContactProps, FeaturesProps } from '~/shared/types';
 import { HeroProps } from '~/shared/types';
 
@@ -39,10 +39,10 @@ export const contact2Contact: ContactProps = {
       href: 'mailto:support@andersoncarlconsultancy.uk',
     },
     {
-      title: 'WhatsApp',
-      description: '+44 7529 418057',
-      icon: IconBrandWhatsapp,
-      href: 'https://wa.me/447529418057',
+      title: 'Live chat',
+      description: 'chat.andersoncarlconsultancy.uk',
+      icon: IconMessageCircle,
+      href: 'https://chat.andersoncarlconsultancy.uk',
     },
     {
       title: 'Office Location',

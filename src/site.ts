@@ -1,6 +1,13 @@
 // Site-level constants for the rebuilt front end. The legacy `~/config.js` is
 // left untouched because ~25 existing files import it.
 
+// The client chat replaced WhatsApp and the published mobile number as the way
+// in. Everything that used to open wa.me or dial the phone now opens a thread.
+export const CHAT_URL = 'https://chat.andersoncarlconsultancy.uk';
+
+// phone/whatsapp stay in the shape because lib/contact.ts and the admin
+// contact record still carry them. They are no longer rendered as links —
+// the chat is the only published way in.
 export const CONTACT_FALLBACK = {
   email: 'support@andersoncarlconsultancy.uk',
   phone: '+44 7529 418057',
@@ -9,11 +16,17 @@ export const CONTACT_FALLBACK = {
   availability: '24/7 Support',
 };
 
-export const WHATSAPP_MESSAGE =
-  'Hello Anderson Carl, I would like to enquire about your UK document services.';
+/** Canonical entry point into the client chat. */
+export function chatLink() {
+  return CHAT_URL;
+}
 
-export function whatsappLink(number: string = CONTACT_FALLBACK.whatsapp) {
-  return `https://wa.me/${number}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+/**
+ * @deprecated WhatsApp is no longer an enquiry channel. Kept so that any
+ * straggling caller redirects to the chat instead of a dead wa.me link.
+ */
+export function whatsappLink() {
+  return CHAT_URL;
 }
 
 export const NAV = [

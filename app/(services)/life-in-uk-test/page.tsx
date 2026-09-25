@@ -167,10 +167,10 @@ export default function LifeInUKTestService() {
               Get Free Consultation
             </Link>
             <a
-              href="https://wa.me/447529418057"
-              className="btn btn-whatsapp"
+              href="https://chat.andersoncarlconsultancy.uk"
+              className="btn btn-chat"
             >
-              WhatsApp Us Now
+              Start a Chat
             </a>
           </div>
         </div>
