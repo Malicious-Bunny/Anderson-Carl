@@ -17,7 +17,7 @@ export default function ServicesPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Services"
+
         title="Honest preparation for the real process"
         intro="We won’t offer a shortcut around an official exam or a government procedure, and we’d turn away work that asked us to."
         image={{ src: IMAGES.conversation, alt: 'Two women talking across a small table by a window' }}

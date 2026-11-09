@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function FAQsPage() {
   return (
     <>
-      <PageHeader eyebrow="FAQs" title="Common questions" intro="The things people most often ask us before they get in touch." />
+      <PageHeader title="Common questions" intro="The things people most often ask us before they get in touch." />
 
       <section className="container-page pt-16 md:pt-24">
         <div className="mx-auto max-w-3xl">

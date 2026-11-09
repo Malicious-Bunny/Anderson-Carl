@@ -22,7 +22,7 @@ export default function ContactPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Contact"
+
         title="Book a consultation"
         intro="The fastest way to reach us is WhatsApp. Send a short message about your situation and we’ll arrange a time to talk."
         image={{ src: IMAGES.london, alt: 'People crossing the Millennium Bridge towards St Paul’s Cathedral' }}

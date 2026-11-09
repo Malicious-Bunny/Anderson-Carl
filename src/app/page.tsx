@@ -27,8 +27,7 @@ export default function HomePage() {
       <section className="container-page">
         <div className="on-dark grid overflow-hidden rounded-panel bg-forest-800 text-cream md:min-h-[min(calc(100svh-8rem),42rem)] md:grid-cols-[1.1fr_1fr]">
           <div className="panel-pad flex flex-col justify-center py-14 md:py-20">
-            <p className="eyebrow text-cream/75">Immigration solicitors, Chancery Lane</p>
-            <h1 className="mt-8 max-w-[12ch] text-display text-cream">Straight answers on UK immigration.</h1>
+            <h1 className="max-w-[12ch] text-display text-cream">Straight answers on UK immigration.</h1>
             <p className="mt-7 max-w-md text-lg text-cream/75">
               Visas, settlement and appeals, handled by solicitors who tell you your real chances before you pay us
               anything.
@@ -53,10 +52,6 @@ export default function HomePage() {
                 Prepared properly.
                 <br />
                 The first time.
-              </span>
-              {/* Signature detail: the machine-readable line from the foot of a passport page */}
-              <span aria-hidden className="mt-4 block overflow-hidden whitespace-nowrap border-t border-cream/40 pt-3 font-mono text-[0.6875rem] tracking-[0.2em] text-cream/70">
-                P&lt;GBRANDERSON&lt;CARL&lt;&lt;STRAIGHT&lt;ANSWERS&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
               </span>
             </figcaption>
           </figure>

@@ -80,15 +80,6 @@
     @apply inline-flex size-12 shrink-0 items-center justify-center rounded-full bg-sand-200 text-forest-800 transition-colors duration-150;
   }
 
-  /* The small label: a bronze dot and spaced capitals. Used once per page, at the top. */
-  .eyebrow {
-    @apply flex items-center gap-3 text-xs font-medium uppercase tracking-[0.14em];
-  }
-  .eyebrow::before {
-    content: '';
-    @apply size-1.5 shrink-0 rounded-full bg-bronze;
-  }
-
   /* On forest, focus rings switch to cream */
   .on-dark :focus-visible {
     @apply outline-cream;
