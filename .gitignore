@@ -34,3 +34,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Stageshow skill playground dependencies
+/.claude/skills/stageshow/node_modules
+
+# Claude Code skills and tooling, not part of the site
+/.claude/

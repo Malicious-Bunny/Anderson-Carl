@@ -1,101 +1,135 @@
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowRight, ArrowUpRight, ClipboardCheck, FileSignature, MessageCircle, Send } from 'lucide-react';
 
-export default function Home() {
+import { getAllServices } from '~/lib/services';
+import { IMAGES } from '~/lib/images';
+import { FAQS } from '~/content/faqs';
+import BookButton from '~/components/BookButton';
+import ClosingCta from '~/components/ClosingCta';
+import Faq from '~/components/Faq';
+import Promises from '~/components/Promises';
+import ServiceRows from '~/components/ServiceRows';
+
+const PROCESS = [
+  { icon: MessageCircle, title: 'Consultation', body: 'We sit down or video call and go through your situation, your paperwork, and what you’re trying to achieve.' },
+  { icon: ClipboardCheck, title: 'Assessment', body: 'You get an honest written view of where you stand, what the risks are, and how long it’s realistically going to take.' },
+  { icon: FileSignature, title: 'Preparation', body: 'We build your application or study plan with you, one step at a time, so nothing gets rushed.' },
+  { icon: Send, title: 'Submission', body: 'We submit through the correct official channel and stay with your case until it’s actually resolved.' },
+];
+
+export default function HomePage() {
+  const services = getAllServices();
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      {/* Hero: the reference's forest panel and photo, side by side in one rounded frame */}
+      <section className="container-page">
+        <div className="on-dark grid overflow-hidden rounded-panel bg-forest-800 text-cream md:min-h-[min(calc(100svh-8rem),42rem)] md:grid-cols-[1.1fr_1fr]">
+          <div className="panel-pad flex flex-col justify-center py-14 md:py-20">
+            <p className="eyebrow text-cream/75">Immigration solicitors, Chancery Lane</p>
+            <h1 className="mt-8 max-w-[12ch] text-display text-cream">Straight answers on UK immigration.</h1>
+            <p className="mt-7 max-w-md text-lg text-cream/75">
+              Visas, settlement and appeals, handled by solicitors who tell you your real chances before you pay us
+              anything.
+            </p>
+            <BookButton className="btn btn-sand mt-10 w-full sm:w-auto sm:self-start">
+              Message us on WhatsApp
+              <ArrowUpRight size={18} aria-hidden />
+            </BookButton>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <figure className="relative aspect-[4/5] sm:aspect-[4/3] md:aspect-auto">
             <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src={IMAGES.letter}
+              alt="Two people at a kitchen table, smiling as they read a letter together"
+              fill
+              priority
+              sizes="(min-width: 768px) 48vw, 100vw"
+              className="object-cover object-[60%_center]"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#101c18]/85 via-[#101c18]/40 to-transparent px-6 pb-6 pt-24 text-cream md:px-9 md:pb-8">
+              <span className="block text-xs font-medium uppercase leading-relaxed tracking-[0.16em]">
+                Prepared properly.
+                <br />
+                The first time.
+              </span>
+              {/* Signature detail: the machine-readable line from the foot of a passport page */}
+              <span aria-hidden className="mt-4 block overflow-hidden whitespace-nowrap border-t border-cream/40 pt-3 font-mono text-[0.6875rem] tracking-[0.2em] text-cream/70">
+                P&lt;GBRANDERSON&lt;CARL&lt;&lt;STRAIGHT&lt;ANSWERS&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+              </span>
+            </figcaption>
+          </figure>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className="mt-4">
+          <Promises />
+        </div>
+      </section>
+
+      {/* Services: a photo and a short intro beside the list */}
+      <section id="services" className="container-page scroll-mt-4 py-20 md:py-32">
+        <div className="grid gap-12 md:grid-cols-12 md:gap-10">
+          <div className="md:col-span-5 md:px-8">
+            <h2>What we help with</h2>
+            <p className="mt-5 max-w-sm text-ink-600">Choose an area to see what&apos;s included and what you&apos;ll need.</p>
+            <div className="relative mt-10 hidden aspect-[4/5] overflow-hidden rounded-panel md:block">
+              <Image src={IMAGES.conversation} alt="Two women talking across a small table by a window" fill sizes="35vw" className="object-cover" />
+            </div>
+          </div>
+          <div className="md:col-span-7 md:pt-2">
+            <ServiceRows services={services} />
+          </div>
+        </div>
+      </section>
+
+      {/* How it works: a forest panel with the steps as a connected timeline (vertical on phones) */}
+      <section className="container-page">
+        <div className="on-dark rounded-panel bg-forest-800 px-6 py-14 text-cream md:px-14 md:py-20">
+          <div className="grid gap-5 md:grid-cols-12 md:items-end md:gap-10">
+            <h2 className="text-cream md:col-span-6">How it works</h2>
+            <p className="max-w-sm text-cream/75 md:col-span-5 md:col-start-8">Most cases start with a WhatsApp message. This is what happens after that.</p>
+          </div>
+          <ol className="mt-12 grid md:mt-16 md:grid-cols-4 md:gap-8">
+            {PROCESS.map(({ icon: Icon, title, body }, i) => (
+              <li key={title} className="relative flex gap-6 pb-10 last:pb-0 md:block md:pb-0">
+                {i < PROCESS.length - 1 && (
+                  <span aria-hidden className="absolute bottom-0 left-6 top-12 w-px bg-cream/20 md:bottom-auto md:left-14 md:right-[-2rem] md:top-6 md:h-px md:w-auto" />
+                )}
+                <span className="relative inline-flex size-12 shrink-0 items-center justify-center rounded-full bg-sand-300 text-forest-800">
+                  <Icon size={20} strokeWidth={1.6} aria-hidden />
+                </span>
+                <div className="pt-2.5 md:pt-6">
+                  <h3 className="text-cream">
+                    <span className="sr-only">Step {i + 1}: </span>
+                    {title}
+                  </h3>
+                  <p className="mt-2 max-w-md text-[0.9375rem] text-cream/75">{body}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* The questions people ask before getting in touch */}
+      <section className="container-page pt-20 md:pt-32">
+        <div className="grid gap-10 md:grid-cols-12 md:px-8">
+          <div className="md:col-span-5">
+            <h2>Before you get in touch</h2>
+            <p className="mt-5 max-w-sm text-ink-600">The questions people most often ask us first.</p>
+            <Link href="/faqs" className="mt-6 inline-flex items-center gap-2 py-3 font-medium text-forest-800 underline-offset-4 hover:underline">
+              All questions
+              <ArrowRight size={18} aria-hidden />
+            </Link>
+          </div>
+          <div className="md:col-span-7">
+            <Faq items={FAQS.slice(0, 3)} />
+          </div>
+        </div>
+      </section>
+
+      <ClosingCta />
+    </>
   );
 }
