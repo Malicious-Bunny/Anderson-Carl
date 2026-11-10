@@ -23,38 +23,29 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero: the reference's forest panel and photo, side by side in one rounded frame */}
+      {/* Hero: one full-width London photo in a rounded frame, words over a soft forest shade */}
       <section className="container-page">
-        <div className="on-dark grid overflow-hidden rounded-panel bg-forest-800 text-cream md:min-h-[min(calc(100svh-8rem),42rem)] md:grid-cols-[1.1fr_1fr]">
-          <div className="panel-pad flex flex-col justify-center py-14 md:py-20">
-            <h1 className="max-w-[12ch] text-display text-cream">Straight answers on UK immigration.</h1>
-            <p className="mt-7 max-w-md text-lg text-cream/75">
-              Visas, settlement and appeals, handled by solicitors who tell you your real chances before you pay us
+        <div className="on-dark relative isolate overflow-hidden rounded-panel bg-forest-800 text-cream">
+          <Image
+            src={IMAGES.london}
+            alt="People crossing the Millennium Bridge towards St Paul’s Cathedral"
+            fill
+            priority
+            sizes="100vw"
+            className="-z-10 object-cover object-[70%_center]"
+          />
+          <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-t from-forest-900/95 via-forest-900/70 to-forest-900/10 md:bg-gradient-to-r md:from-forest-900/90 md:via-forest-900/55 md:to-transparent" />
+          <div className="panel-pad flex min-h-[36rem] flex-col justify-end pb-12 pt-40 md:min-h-[min(calc(100svh-8rem),40rem)] md:pb-20">
+            <h1 className="max-w-[14ch] text-[clamp(2.5rem,5vw,4.25rem)] leading-[1.02] tracking-[-0.035em] text-cream">Straight answers on UK immigration.</h1>
+            <p className="mt-6 max-w-md text-lg text-cream/85">
+              London solicitors for visas, settlement and appeals. We tell you your real chances before you pay us
               anything.
             </p>
-            <BookButton className="btn btn-sand mt-10 w-full sm:w-auto sm:self-start">
+            <BookButton className="btn btn-sand mt-9 w-full sm:w-auto sm:self-start">
               Message us on WhatsApp
               <ArrowUpRight size={18} aria-hidden />
             </BookButton>
           </div>
-
-          <figure className="relative aspect-[4/5] sm:aspect-[4/3] md:aspect-auto">
-            <Image
-              src={IMAGES.letter}
-              alt="Two people at a kitchen table, smiling as they read a letter together"
-              fill
-              priority
-              sizes="(min-width: 768px) 48vw, 100vw"
-              className="object-cover object-[60%_center]"
-            />
-            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#101c18]/85 via-[#101c18]/40 to-transparent px-6 pb-6 pt-24 text-cream md:px-9 md:pb-8">
-              <span className="block text-xs font-medium uppercase leading-relaxed tracking-[0.16em]">
-                Prepared properly.
-                <br />
-                The first time.
-              </span>
-            </figcaption>
-          </figure>
         </div>
 
         <div className="mt-4">

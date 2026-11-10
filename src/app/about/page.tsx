@@ -36,7 +36,7 @@ export default function AboutPage() {
 
         title="Advice you can trust"
         intro={`${SITE.legalName} gives clients honest, competent guidance through the UK immigration system. No shortcuts, no guarantees we can’t back up, and no vague promises.`}
-        image={{ src: IMAGES.london, alt: 'People crossing the Millennium Bridge towards St Paul’s Cathedral' }}
+        image={{ src: IMAGES.conversation, alt: 'Two women talking across a small table by a window' }}
       />
 
       <section className="container-page py-16 md:py-28">
