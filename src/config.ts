@@ -1,7 +1,7 @@
 export const SITE = {
   name: 'Anderson Carl',
   legalName: 'Anderson Carl Immigration Solicitors',
-  title: 'Anderson Carl | UK Immigration Solicitors',
+  title: 'Anderson Carl, UK immigration solicitors in London',
   description:
     'Anderson Carl is a London immigration law practice. We advise on visas, settlement, appeals and exam preparation, and we tell clients the truth about their chances before they pay us a penny.',
   url: 'https://andersoncarlconsultancy.uk',

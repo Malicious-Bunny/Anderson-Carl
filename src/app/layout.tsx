@@ -29,6 +29,22 @@ export const metadata: Metadata = {
     default: SITE.title,
   },
   description: SITE.description,
+  metadataBase: new URL(SITE.url),
+  alternates: { canonical: '/' },
+  openGraph: {
+    type: 'website',
+    locale: 'en_GB',
+    url: SITE.url,
+    siteName: SITE.name,
+    title: SITE.title,
+    description: SITE.description,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE.title,
+    description: SITE.description,
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
